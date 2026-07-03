@@ -2,7 +2,8 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>嘉瑞的邊做邊學</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>嘉瑞的邊做邊學 · Learning by Doing</title>
   <style>
     body {
       font-family: "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
@@ -21,13 +22,29 @@
 
     header h1 {
       font-size: 2.2em;
-      margin-bottom: 8px;
+      margin-bottom: 2px;
       color: #c0392b;
+    }
+
+    header .h1-en {
+      display: block;
+      font-size: 0.5em;
+      font-weight: normal;
+      font-style: italic;
+      color: #cf7a4a;
+      letter-spacing: 1px;
     }
 
     .subtitle {
       color: #7d6a55;
       font-size: 0.95em;
+    }
+
+    .subtitle .en {
+      display: block;
+      font-size: 0.9em;
+      font-style: italic;
+      color: #a08a72;
     }
 
     .timeline {
@@ -44,6 +61,11 @@
       box-shadow: 0 2px 8px rgba(140, 90, 40, 0.12);
     }
 
+    .entry.featured {
+      border-left: 5px solid #c0392b;
+      background-color: #fff4ea;
+    }
+
     .date {
       display: inline-block;
       font-size: 0.8em;
@@ -54,15 +76,36 @@
       margin-bottom: 10px;
     }
 
+    .entry.featured .date {
+      background-color: #c0392b;
+    }
+
     .entry h2 {
       margin: 0 0 8px 0;
       font-size: 1.2em;
       color: #a8562f;
     }
 
+    .entry h2 .en-title {
+      display: block;
+      font-size: 0.72em;
+      font-weight: normal;
+      font-style: italic;
+      color: #b08968;
+      margin-top: 2px;
+    }
+
     .entry p {
       margin: 0 0 12px 0;
       color: #5c4f42;
+    }
+
+    .entry p .en {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: #8a7b6c;
     }
 
     .entry video {
@@ -74,42 +117,83 @@
       background-color: #000;
     }
 
+    .read-link {
+      display: inline-block;
+      color: #c0392b;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 2px solid #e6a17a;
+      padding-bottom: 1px;
+    }
+
     footer {
       text-align: center;
       margin-top: 60px;
       font-size: 0.85em;
       color: #927b60;
     }
+
+    footer .en {
+      display: block;
+      font-style: italic;
+      color: #a8967f;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>嘉瑞的邊做邊學</h1>
-    <p class="subtitle">一邊玩 AI 工具、一邊記錄學會的東西</p>
+    <h1>嘉瑞的邊做邊學<span class="h1-en">Learning by Doing · by Chia-jue</span></h1>
+    <p class="subtitle">
+      一邊玩 AI 工具、一邊記錄學會的東西
+      <span class="en">Playing with AI tools, and keeping a record of what I learn along the way.</span>
+    </p>
   </header>
 
   <main>
     <ul class="timeline">
 
+      <li class="entry featured">
+        <span class="date">2026-07-03</span>
+        <h2>咩咩寓言：咩咩與一盞小小的光
+          <span class="en-title">A Fable — Mie-mie and a Small, Small Light</span>
+        </h2>
+        <p>一則專屬於我的原創寓言，主角是我的陪伴小夥伴咩咩。獻給我善良的孩子。
+          <span class="en">An original fable that belongs to me, starring my gentle companion Mie-mie. For my kind-hearted child.</span>
+        </p>
+        <p><a class="read-link" href="fable.html">閱讀這則寓言 · Read the fable →</a></p>
+      </li>
+
       <li class="entry">
         <span class="date">2026-07-03</span>
-        <h2>HyperFrames 開場卡：早安，嘉瑞</h2>
-        <p>用 HyperFrames（把 HTML 算成影片）做的第一支開場卡，5 秒的暖色調問候。</p>
+        <h2>HyperFrames 開場卡：早安，嘉瑞
+          <span class="en-title">HyperFrames Title Card — "Good Morning, Chia-jue"</span>
+        </h2>
+        <p>用 HyperFrames（把 HTML 算成影片）做的第一支開場卡，5 秒的暖色調問候。
+          <span class="en">My first title card, made with HyperFrames (which renders HTML into video) — a 5-second warm-toned greeting.</span>
+        </p>
         <video controls preload="metadata" src="assets/videos/hyperframes-intro.mp4"></video>
       </li>
 
       <li class="entry">
         <span class="date">2026-07-02</span>
-        <h2>我的 AI 數位分身</h2>
-        <p>用 Hedra + 自己克隆的聲音，做出第一支「本人的臉＋本人的聲音」對嘴測試片。</p>
+        <h2>我的 AI 數位分身
+          <span class="en-title">My AI Digital Avatar</span>
+        </h2>
+        <p>用 Hedra + 自己克隆的聲音，做出第一支「本人的臉＋本人的聲音」對嘴測試片。
+          <span class="en">Made with Hedra plus my own cloned voice — my first lip-sync test with my own face and my own voice.</span>
+        </p>
         <video controls preload="metadata" src="assets/videos/avatar.mp4"></video>
       </li>
 
       <li class="entry">
         <span class="date">2026-07-01</span>
-        <h2>水墨短片：行至水窮處（溫柔版）</h2>
-        <p>用 Gemini 生水墨淡彩插圖、Veo 讓畫面動起來、自己的克隆聲音配旁白，37 秒的水墨風短片。</p>
+        <h2>水墨短片：行至水窮處（溫柔版）
+          <span class="en-title">Ink-Wash Short — "Where the Water Ends" (Gentle Version)</span>
+        </h2>
+        <p>用 Gemini 生水墨淡彩插圖、Veo 讓畫面動起來、自己的克隆聲音配旁白，37 秒的水墨風短片。
+          <span class="en">Ink-wash illustrations from Gemini, brought to motion by Veo, narrated in my own cloned voice — a 37-second ink-wash short.</span>
+        </p>
         <video controls preload="metadata" src="assets/videos/ink-wash.mp4"></video>
       </li>
 
@@ -117,7 +201,9 @@
   </main>
 
   <footer>
-    <p>由嘉瑞製作，AI 是工具，手還是自己的。</p>
+    <p>由嘉瑞製作，AI 是工具，手還是自己的。
+      <span class="en">Made by Chia-jue. AI is the tool; the hands are still my own.</span>
+    </p>
   </footer>
 
 </body>
