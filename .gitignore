@@ -1,0 +1,5 @@
+# Claude Code 的本機設定，不需要上傳到公開網站
+.claude/
+
+# 已經把樣式縫進 index.html，這個舊檔案用不到了
+style.css
