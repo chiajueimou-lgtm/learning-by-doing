@@ -39,7 +39,10 @@
     .hero {
       display: block;
       width: 100%;
-      margin: 40px 0 8px;
+      aspect-ratio: 3 / 2;      /* 橫幅：上下短、左右寬 */
+      object-fit: cover;        /* 用裁切而非壓縮，不變形 */
+      object-position: center 78%; /* 往下取景，保留扁舟與水岸，切掉上方留白 */
+      margin: 32px 0 8px;
     }
 
     .hero-caption {
