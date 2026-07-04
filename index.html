@@ -37,13 +37,32 @@
     }
 
     /* —— 開場：一張安靜的畫 —— */
+    .hero-frame {
+      width: 100%;
+      aspect-ratio: 3 / 2;      /* 橫幅：上下短、左右寬 */
+      overflow: hidden;         /* 讓畫在框內緩緩移動、不溢出 */
+      margin: 32px 0 8px;
+    }
+
     .hero {
       display: block;
       width: 100%;
-      aspect-ratio: 3 / 2;      /* 橫幅：上下短、左右寬 */
+      height: 100%;
       object-fit: cover;        /* 用裁切而非壓縮，不變形 */
       object-position: center 78%; /* 往下取景，保留扁舟與水岸，切掉上方留白 */
-      margin: 32px 0 8px;
+      transform-origin: center 68%;
+      /* 極慢的呼吸：緩緩放大並輕輕漂移，像會流動的長卷 */
+      animation: drift 30s ease-in-out infinite alternate;
+    }
+
+    @keyframes drift {
+      from { transform: scale(1) translate(0, 0); }
+      to   { transform: scale(1.06) translate(-1.2%, -0.8%); }
+    }
+
+    /* 若使用者在系統關閉了動態效果，就保持靜止 */
+    @media (prefers-reduced-motion: reduce) {
+      .hero { animation: none; }
     }
 
     .hero-caption {
@@ -190,8 +209,10 @@
 </head>
 <body>
 
-  <img class="hero" src="assets/images/hero.jpg"
-       alt="水墨畫：一位紅衣人划著扁舟，湖面平靜，遠處一輪淡橘色的日">
+  <div class="hero-frame">
+    <img class="hero" src="assets/images/hero.jpg"
+         alt="水墨畫：一位紅衣人划著扁舟，湖面平靜，遠處一輪淡橘色的日">
+  </div>
   <p class="hero-caption">行至水窮處 · Where the water ends</p>
 
   <header>
