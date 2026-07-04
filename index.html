@@ -51,13 +51,13 @@
       object-fit: cover;        /* 用裁切而非壓縮，不變形 */
       object-position: center 78%; /* 往下取景，保留扁舟與水岸，切掉上方留白 */
       transform-origin: center 68%;
-      /* 極慢的呼吸：緩緩放大並輕輕漂移，像會流動的長卷 */
-      animation: drift 30s ease-in-out infinite alternate;
+      /* 緩慢的呼吸：放大並漂移，像會流動的長卷 */
+      animation: drift 18s ease-in-out infinite alternate;
     }
 
     @keyframes drift {
       from { transform: scale(1) translate(0, 0); }
-      to   { transform: scale(1.06) translate(-1.2%, -0.8%); }
+      to   { transform: scale(1.12) translate(-2.2%, -1.4%); }
     }
 
     /* 若使用者在系統關閉了動態效果，就保持靜止 */
