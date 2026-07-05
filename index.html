@@ -10,7 +10,8 @@
       --ink: #2b2825;        /* 墨色，標題用 */
       --ink-soft: #55504a;   /* 淡墨，副標題用 */
       --ink-read: #2a2621;   /* 接近墨黑，內文閱讀用，最清楚 */
-      --ink-faint: #9a9084;  /* 更淡，日期／英文用 */
+      --ink-faint: #9a9084;  /* 更淡，日期用 */
+      --ink-en: #55504a;     /* 英文用，比淡墨深一階，好閱讀 */
       --red: #b23a2e;        /* 那一抹紅衣的紅——全站唯一的顏色 */
       --hair: rgba(43, 40, 37, 0.08); /* 極細的分隔線 */
     }
@@ -69,7 +70,7 @@
       text-align: center;
       font-size: 0.85em;
       font-style: italic;
-      color: var(--ink-faint);
+      color: var(--ink-en);
       letter-spacing: 0.5px;
       margin: 0 0 32px;
     }
@@ -94,7 +95,7 @@
       font-weight: normal;
       font-style: italic;
       letter-spacing: 1.5px;
-      color: var(--ink-faint);
+      color: var(--ink-en);
       margin-top: 8px;
     }
 
@@ -108,7 +109,7 @@
       display: block;
       font-size: 0.9em;
       font-style: italic;
-      color: var(--ink-faint);
+      color: var(--ink-en);
       margin-top: 4px;
     }
 
@@ -153,7 +154,7 @@
       font-size: 0.68em;
       font-weight: normal;
       font-style: italic;
-      color: var(--ink-faint);
+      color: var(--ink-en);
       margin-top: 4px;
     }
 
@@ -167,7 +168,7 @@
       margin-top: 5px;
       font-size: 0.9em;
       font-style: italic;
-      color: var(--ink-faint);
+      color: var(--ink-en);
     }
 
     .entry video {
@@ -208,6 +209,7 @@
     footer .en {
       display: block;
       font-style: italic;
+      color: var(--ink-en);
       margin-top: 4px;
     }
   </style>
