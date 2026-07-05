@@ -179,6 +179,11 @@
       background-color: #000;
     }
 
+    /* 橫式影片：放寬到整欄，不然會縮得太小 */
+    .entry video.wide {
+      max-width: 100%;
+    }
+
     .read-link {
       display: inline-block;
       color: var(--red);
@@ -225,6 +230,17 @@
 
   <main>
     <ul class="timeline">
+
+      <li class="entry">
+        <span class="date">2026 · 07 · 05</span>
+        <h2>水墨旅人：走進自己的畫裡
+          <span class="en-title">Ink-Wash Traveler — Walking into My Own Painting</span>
+        </h2>
+        <p>先用 Gemini 把自己的照片畫成水墨世界的旅人，再用 Pixverse 讓畫動起來：回眸、轉身，走向雲霧與發光的河。轉過身後髮絲悄悄變長了——就當作是入畫的變身吧。
+          <span class="en">Gemini painted my photo into an ink-wash traveler, then Pixverse brought the painting to life — a glance back, a slow turn, a walk toward the mist and a glowing river. Somewhere in the turn my hair grew long; call it what happens when you step into a painting.</span>
+        </p>
+        <video class="wide" controls preload="metadata" src="assets/videos/ink-traveler.mp4"></video>
+      </li>
 
       <li class="entry featured">
         <span class="date">2026 · 07 · 03</span>
