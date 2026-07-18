@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>假設語氣全解析：所有可能的排列組合 · The Complete Map of English Conditionals</title>
+  <style>
+    :root {
+      --paper: #f7f4ee;
+      --ink: #2b2825;
+      --ink-soft: #55504a;
+      --ink-read: #2a2621;
+      --ink-faint: #9a9084;
+      --ink-en: #2a2621;
+      --red: #b23a2e;
+      --hair: rgba(43, 40, 37, 0.08);
+      --tag-bg: #f0e9dc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: "Noto Serif TC", "Songti TC", "PingFang TC", "Microsoft JhengHei", serif;
+      background-color: var(--paper);
+      color: var(--ink-soft);
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 96px;
+      line-height: 1.9;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 36px;
+      color: var(--red);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(178, 58, 46, 0.35);
+      padding-bottom: 1px;
+      font-size: 0.92em;
+    }
+    .back:hover { border-bottom-color: var(--red); }
+
+    header { text-align: center; margin-bottom: 12px; }
+
+    h1 {
+      font-size: 1.7em;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 1px;
+      margin: 0 0 8px;
+      line-height: 1.4;
+    }
+
+    h1 .en {
+      display: block;
+      font-size: 0.5em;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--ink-en);
+      letter-spacing: 0.5px;
+      margin-top: 10px;
+    }
+
+    .lead {
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 0.95em;
+      margin: 24px 0 8px;
+    }
+    .lead .en {
+      display: block;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+      margin-top: 6px;
+    }
+
+    .intro {
+      margin: 40px 0;
+      padding: 28px 30px;
+      background: #fffdf8;
+      border: 1px solid var(--hair);
+      border-radius: 4px;
+    }
+    .intro p { margin: 0 0 14px; color: var(--ink-read); }
+    .intro p:last-child { margin-bottom: 0; }
+    .intro .en {
+      display: block;
+      margin-top: 5px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+    }
+
+    /* 邏輯地圖：兩個子句 × 三個時間 */
+    .map {
+      margin: 36px 0;
+      overflow-x: auto;
+    }
+    .map table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.92em;
+    }
+    .map th, .map td {
+      border: 1px solid var(--hair);
+      padding: 12px 14px;
+      text-align: center;
+      color: var(--ink-read);
+    }
+    .map th { background: #fffdf8; font-weight: 600; color: var(--ink); }
+    .map td.yes { color: var(--red); font-weight: 600; }
+    .map td.no { color: var(--ink-faint); }
+    .map caption {
+      caption-side: bottom;
+      padding-top: 10px;
+      font-size: 0.85em;
+      color: var(--ink-faint);
+      text-align: left;
+    }
+
+    /* 五種型態 */
+    .pattern {
+      margin: 56px 0;
+      padding-top: 44px;
+      border-top: 1px solid var(--hair);
+    }
+    .pattern:first-of-type { border-top: none; }
+
+    .pattern .tag {
+      display: inline-block;
+      font-size: 0.78em;
+      color: var(--red);
+      background: var(--tag-bg);
+      padding: 4px 14px;
+      border-radius: 999px;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .pattern h2 {
+      margin: 0 0 6px;
+      font-size: 1.25em;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .pattern h2 .en-title {
+      display: block;
+      font-size: 0.62em;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--ink-en);
+      margin-top: 4px;
+    }
+
+    .formula {
+      margin: 18px 0;
+      padding: 18px 24px;
+      background: #fffdf8;
+      border-left: 3px solid var(--red);
+      font-size: 1.05em;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.5px;
+    }
+
+    .pattern .when {
+      color: var(--ink-read);
+      margin: 16px 0 26px;
+    }
+    .pattern .when .en {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+    }
+
+    .examples { list-style: none; padding: 0; margin: 0; }
+    .examples li {
+      margin-bottom: 20px;
+      padding: 18px 22px;
+      background: #fffdf8;
+      border-radius: 4px;
+      border: 1px solid var(--hair);
+    }
+    .examples li:last-child { margin-bottom: 0; }
+    .examples .num {
+      display: inline-block;
+      font-size: 0.75em;
+      color: var(--ink-faint);
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    .examples .sentence {
+      color: var(--ink-read);
+      font-weight: 600;
+      line-height: 1.6;
+    }
+    .examples .k { color: var(--red); }
+    .examples .zh {
+      display: block;
+      margin-top: 8px;
+      color: var(--ink-soft);
+      font-size: 0.94em;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 88px;
+      padding-top: 40px;
+      border-top: 1px solid var(--hair);
+      font-size: 0.85em;
+      color: var(--ink-faint);
+    }
+    footer .en { display: block; font-style: italic; color: var(--ink-en); margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+  <a class="back" href="index.html">← 回邊做邊學首頁 · Back to home</a>
+
+  <header>
+    <h1>假設語氣全解析：所有可能的排列組合
+      <span class="en">The Complete Map of English Conditionals — Every Combination</span>
+    </h1>
+  </header>
+
+  <p class="lead">
+    課本通常只教三種「純」的假設語氣，但現實生活講話時常常把「過去的條件」跟「現在的結果」混在一起講。這篇筆記用排列組合的方式，把假設語氣的所有情況整理成五種。
+    <span class="en">Textbooks usually stop at three "pure" conditional types, but real speech often mixes a past condition with a present result (or vice versa). This note maps out all five meaningfully distinct patterns using a simple combinatorics framework.</span>
+  </p>
+
+  <div class="intro">
+    <p>假設語氣的每一句話，其實都是<strong>兩個子句</strong>組成的：「if 子句」（條件）跟「主要子句」（結果）。每個子句各自指向一個時間：現在、過去，或是還沒發生的未來。
+      <span class="en">Every conditional sentence has two clauses — the if-clause (the condition) and the main clause (the result) — and each one points to its own point in time: present, past, or a not-yet-happened future.</span>
+    </p>
+    <p>把「if 子句的時間」跟「主要子句的時間」兩兩配對，理論上有 3×3＝9 種組合，但只有其中<strong>五種</strong>在真實英文裡站得住腳——其他組合要不就是邏輯不通（比如結果發生在原因之前），要不就是根本沒必要跟其他類型分開講。
+      <span class="en">Pairing the if-clause's time with the main clause's time gives 3×3 = 9 combinations in theory, but only <strong>five</strong> hold up in real English — the rest either break causality (a result can't precede its cause) or collapse into one of the five anyway.</span>
+    </p>
+  </div>
+
+  <div class="map">
+    <table>
+      <caption>
+        ✓ = 英文裡真的會這樣講的組合；空白 = 邏輯不通或跟別的類型重複，不需要獨立看待。
+        <span class="en" style="display:block; margin-top:4px;">✓ marks a combination that genuinely occurs in English; blank means it either breaks causality or collapses into another type.</span>
+      </caption>
+      <thead>
+        <tr>
+          <th>if 子句 ＼ 結果子句</th>
+          <th>現在</th>
+          <th>過去</th>
+          <th>未來</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>現在</strong></td>
+          <td class="yes">✓ 型一</td>
+          <td class="yes">✓ 型五（混合乙）</td>
+          <td class="no">併入型一</td>
+        </tr>
+        <tr>
+          <td><strong>過去</strong></td>
+          <td class="yes">✓ 型四（混合甲）</td>
+          <td class="yes">✓ 型二</td>
+          <td class="no">併入型四</td>
+        </tr>
+        <tr>
+          <td><strong>未來</strong></td>
+          <td class="no">—</td>
+          <td class="no">邏輯不通</td>
+          <td class="yes">✓ 型三</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 型一 -->
+  <section class="pattern">
+    <span class="tag">型一 · TYPE 1</span>
+    <h2>與現在事實相反
+      <span class="en-title">Present Unreal Conditional</span>
+    </h2>
+    <div class="formula">If + 主詞 + 過去式，主詞 + would + 原形動詞</div>
+    <p class="when">講一件「現在不是這樣，但如果是的話」的白日夢——條件跟結果都是「現在」這個時間點。
+      <span class="en">A present daydream: both the condition and the result live in "now."</span>
+    </p>
+    <ul class="examples">
+      <li>
+        <span class="num">例句 ①</span>
+        <div class="sentence">If I <span class="k">spoke</span> French fluently, I <span class="k">would</span> apply for the transfer to the Paris office.</div>
+        <span class="zh">假如我法文說得流利，我就會申請調去巴黎的辦公室。</span>
+      </li>
+      <li>
+        <span class="num">例句 ②</span>
+        <div class="sentence">If the company <span class="k">weren't</span> struggling financially, it <span class="k">wouldn't</span> be cutting so many jobs this quarter.</div>
+        <span class="zh">假如這家公司財務狀況不吃緊，這一季就不會裁這麼多人。</span>
+      </li>
+      <li>
+        <span class="num">例句 ③（較複雜）</span>
+        <div class="sentence">If my parents <span class="k">lived</span> closer to the city, they <span class="k">would</span> visit us every weekend instead of just twice a year.</div>
+        <span class="zh">假如我父母住得離城裡近一點，他們就會每個週末都來看我們，而不是一年只來兩次。</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 型二 -->
+  <section class="pattern">
+    <span class="tag">型二 · TYPE 2</span>
+    <h2>與過去事實相反
+      <span class="en-title">Past Unreal Conditional</span>
+    </h2>
+    <div class="formula">If + 主詞 + had + 過去分詞，主詞 + would have + 過去分詞</div>
+    <p class="when">條件跟結果都已經是無法改變的過去——常常帶著一點「早知道⋯⋯」的懊悔感。
+      <span class="en">Both the condition and the result are locked in the past — this pattern often carries a touch of regret.</span>
+    </p>
+    <ul class="examples">
+      <li>
+        <span class="num">例句 ①</span>
+        <div class="sentence">If I <span class="k">had studied</span> harder, I <span class="k">would have passed</span> the bar exam on my first attempt.</div>
+        <span class="zh">假如我當初更用功唸書，我第一次考律師執照就會過。</span>
+      </li>
+      <li>
+        <span class="num">例句 ②</span>
+        <div class="sentence">If she <span class="k">had left</span> home earlier, she <span class="k">wouldn't have missed</span> the last flight to Taipei.</div>
+        <span class="zh">假如她當初早一點出門，就不會錯過飛台北的最後一班飛機。</span>
+      </li>
+      <li>
+        <span class="num">例句 ③（較複雜）</span>
+        <div class="sentence">If the captain <span class="k">had checked</span> the weather report before departure, the ship <span class="k">would</span> never <span class="k">have sailed</span> into the storm.</div>
+        <span class="zh">假如船長出發前有查看氣象報告，這艘船就絕不會開進暴風雨裡。</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 型三 -->
+  <section class="pattern">
+    <span class="tag">型三 · TYPE 3</span>
+    <h2>與未來事實相反
+      <span class="en-title">Hypothetical / Remote Future Conditional</span>
+    </h2>
+    <div class="formula">If + 主詞 + were to / should + 原形動詞，主詞 + would / could / might + 原形動詞</div>
+    <p class="when">未來還沒發生，本來就有各種可能。但如果想講一件機率很低、比較像是純假設的未來，就用 were to 或 should，聽起來比普通的「if it rains tomorrow」更不確定、更正式。
+      <span class="en">The future hasn't happened yet, so it's inherently uncertain — but "were to" and "should" mark an event as especially unlikely or purely hypothetical, more formal than an ordinary "if it rains tomorrow."</span>
+    </p>
+    <ul class="examples">
+      <li>
+        <span class="num">例句 ①</span>
+        <div class="sentence">If it <span class="k">were to</span> snow tomorrow, the flight <span class="k">would</span> almost certainly be delayed.</div>
+        <span class="zh">假如明天真的下雪，班機幾乎一定會延誤。</span>
+      </li>
+      <li>
+        <span class="num">例句 ②</span>
+        <div class="sentence"><span class="k">Should</span> the interview be postponed, we <span class="k">would</span> notify all candidates by email immediately.</div>
+        <span class="zh">萬一面試延期，我們會立刻寄信通知所有候選人。</span>
+      </li>
+      <li>
+        <span class="num">例句 ③（較複雜）</span>
+        <div class="sentence"><span class="k">Were</span> the negotiations to collapse before Friday, the company <span class="k">would</span> have to lay off nearly a third of its staff.</div>
+        <span class="zh">萬一談判在星期五前破局，公司就得裁掉將近三分之一的員工。</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 型四 -->
+  <section class="pattern">
+    <span class="tag">型四 · TYPE 4 · 混合式（甲）</span>
+    <h2>過去的條件，現在的結果
+      <span class="en-title">Mixed Conditional A — Past Condition → Present Result</span>
+    </h2>
+    <div class="formula">If + 主詞 + had + 過去分詞（過去），主詞 + would + 原形動詞（現在，不加 have）</div>
+    <p class="when">條件發生在過去，但問的不是「過去會怎樣」，而是「現在會怎樣」。最容易犯的錯，就是把後面也寫成 would have been——但這樣問的就變成過去，不是現在了。
+      <span class="en">The condition is past, but the question is about now — the most common mistake is writing "would have been" in the result clause, which would shift the question back into the past.</span>
+    </p>
+    <ul class="examples">
+      <li>
+        <span class="num">例句 ①</span>
+        <div class="sentence">If I <span class="k">had</span> never <span class="k">met</span> you ten years ago, I wonder whether my life <span class="k">would</span> be so different now.</div>
+        <span class="zh">假如我十年前從沒遇見你，不知道我現在的生活是否會如此不同。</span>
+      </li>
+      <li>
+        <span class="num">例句 ②</span>
+        <div class="sentence">If I <span class="k">hadn't taken</span> that job offer in Boston, I <span class="k">wouldn't be living</span> in this city today.</div>
+        <span class="zh">假如我當初沒接受波士頓那份工作，我今天就不會住在這座城市。</span>
+      </li>
+      <li>
+        <span class="num">例句 ③（較複雜）</span>
+        <div class="sentence">If her grandparents <span class="k">hadn't immigrated</span> during the war, she <span class="k">wouldn't be sitting</span> in this classroom today, thousands of miles from where her family's story began.</div>
+        <span class="zh">假如她的祖父母當年沒有在戰爭期間移民，她今天就不會坐在這間教室裡，離家族故事開始的地方好幾千英里遠。</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 型五 -->
+  <section class="pattern">
+    <span class="tag">型五 · TYPE 5 · 混合式（乙）</span>
+    <h2>現在的條件，過去的結果
+      <span class="en-title">Mixed Conditional B — Present Condition → Past Result</span>
+    </h2>
+    <div class="formula">If + 主詞 + 過去式（現在的個性／狀態），主詞 + would have + 過去分詞（過去）</div>
+    <p class="when">跟型四方向相反：條件講的是一個現在還在持續的個性或狀態（比如「怕高」「固執」），但結果是過去某個已經發生（或沒發生）的事。
+      <span class="en">The mirror image of Type 4: the condition describes an ongoing present trait or state (fear, stubbornness), while the result is something that did or didn't happen in the past.</span>
+    </p>
+    <ul class="examples">
+      <li>
+        <span class="num">例句 ①</span>
+        <div class="sentence">If I <span class="k">weren't</span> so afraid of flying, I <span class="k">would have visited</span> you in Tokyo last spring.</div>
+        <span class="zh">假如我不是這麼怕搭飛機，去年春天我早就去東京看你了。</span>
+      </li>
+      <li>
+        <span class="num">例句 ②</span>
+        <div class="sentence">If she <span class="k">weren't</span> so stubborn, she <span class="k">would have accepted</span> our help when the business first started struggling.</div>
+        <span class="zh">假如她沒那麼固執，公司一開始出狀況時她就會接受我們的幫忙了。</span>
+      </li>
+      <li>
+        <span class="num">例句 ③（較複雜）</span>
+        <div class="sentence">If he <span class="k">didn't care</span> so much about what others think, he <span class="k">would have quit</span> that toxic job years ago instead of staying miserable for so long.</div>
+        <span class="zh">假如他不是那麼在意別人的看法，他早在好幾年前就會辭掉那份烏煙瘴氣的工作，不會這樣痛苦這麼久。</span>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>由嘉瑞製作，AI 是工具，手還是自己的。
+      <span class="en">Made by Chia-jue. AI is the tool; the hands are still my own.</span>
+    </p>
+  </footer>
+
+</body>
+</html>
