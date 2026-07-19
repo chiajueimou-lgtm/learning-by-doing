@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>介系詞固定搭配 + 條列式清單的平行結構 · Preposition Collocations & Bullet-List Parallelism</title>
+  <style>
+    :root {
+      --paper: #f7f4ee;
+      --ink: #2b2825;
+      --ink-soft: #55504a;
+      --ink-read: #2a2621;
+      --ink-faint: #9a9084;
+      --ink-en: #2a2621;
+      --red: #b23a2e;
+      --green: #4a7a4a;
+      --hair: rgba(43, 40, 37, 0.08);
+      --tag-bg: #f0e9dc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Noto Serif TC", "Songti TC", "PingFang TC", "Microsoft JhengHei", serif;
+      background-color: var(--paper); color: var(--ink-soft);
+      max-width: 720px; margin: 0 auto; padding: 40px 24px 96px;
+      line-height: 1.9; font-size: 17px; -webkit-font-smoothing: antialiased;
+    }
+    .back { display: inline-block; margin-bottom: 36px; color: var(--red); text-decoration: none;
+      border-bottom: 1px solid rgba(178, 58, 46, 0.35); padding-bottom: 1px; font-size: 0.92em; }
+    .back:hover { border-bottom-color: var(--red); }
+    header { text-align: center; margin-bottom: 12px; }
+    h1 { font-size: 1.45em; font-weight: 600; color: var(--ink); letter-spacing: 1px; margin: 0 0 8px; line-height: 1.4; }
+    h1 .en { display: block; font-size: 0.5em; font-weight: normal; font-style: italic; color: var(--ink-en); letter-spacing: 0.5px; margin-top: 10px; }
+    .lead { text-align: center; color: var(--ink-soft); font-size: 0.95em; margin: 24px 0 8px; }
+    .lead .en { display: block; font-size: 0.9em; font-style: italic; color: var(--ink-en); margin-top: 6px; }
+    .intro { margin: 40px 0; padding: 28px 30px; background: #fffdf8; border: 1px solid var(--hair); border-radius: 4px; }
+    .intro p { margin: 0 0 14px; color: var(--ink-read); }
+    .intro p:last-child { margin-bottom: 0; }
+    .intro .en { display: block; margin-top: 5px; font-size: 0.9em; font-style: italic; color: var(--ink-en); }
+    .pattern { margin: 56px 0; padding-top: 44px; border-top: 1px solid var(--hair); }
+    .pattern:first-of-type { border-top: none; }
+    .pattern .tag { display: inline-block; font-size: 0.78em; color: var(--red); background: var(--tag-bg);
+      padding: 4px 14px; border-radius: 999px; letter-spacing: 1px; margin-bottom: 14px; }
+    .pattern h2 { margin: 0 0 6px; font-size: 1.25em; font-weight: 600; color: var(--ink); line-height: 1.5; }
+    .pattern h2 .en-title { display: block; font-size: 0.62em; font-weight: normal; font-style: italic; color: var(--ink-en); margin-top: 4px; }
+    .formula { margin: 18px 0; padding: 18px 24px; background: #fffdf8; border-left: 3px solid var(--red);
+      font-size: 1.05em; font-weight: 600; color: var(--ink); letter-spacing: 0.5px; }
+    .pattern .when { color: var(--ink-read); margin: 16px 0 26px; }
+    .pattern .when .en { display: block; margin-top: 4px; font-size: 0.9em; font-style: italic; color: var(--ink-en); }
+    .pattern .note { margin: 20px 0 0; padding: 16px 20px; background: var(--tag-bg); border-radius: 4px; font-size: 0.94em; color: var(--ink-read); }
+    .pattern .note .en { display: block; margin-top: 4px; font-size: 0.9em; font-style: italic; color: var(--ink-en); }
+    .examples { list-style: none; padding: 0; margin: 0; }
+    .examples li { margin-bottom: 20px; padding: 18px 22px; background: #fffdf8; border-radius: 4px; border: 1px solid var(--hair); }
+    .examples li.wrong { border-left: 3px solid var(--red); }
+    .examples li.right { border-left: 3px solid var(--green); }
+    .examples li:last-child { margin-bottom: 0; }
+    .examples .num { display: inline-block; font-size: 0.75em; color: var(--ink-faint); margin-bottom: 8px; letter-spacing: 1px; font-weight: 600; }
+    .examples li.wrong .num { color: var(--red); }
+    .examples li.right .num { color: var(--green); }
+    .examples .sentence { color: var(--ink-read); font-weight: 600; line-height: 1.6; }
+    .examples .k { color: var(--red); }
+    .examples .k2 { color: var(--green); }
+    .examples .zh { display: block; margin-top: 8px; color: var(--ink-soft); font-size: 0.94em; }
+    .examples ul.bullets { margin: 6px 0 0; padding-left: 22px; font-weight: 600; color: var(--ink-read); }
+    .safelist { margin: 24px 0; overflow-x: auto; }
+    .safelist table { border-collapse: collapse; width: 100%; font-size: 0.92em; }
+    .safelist th, .safelist td { border: 1px solid var(--hair); padding: 12px 14px; text-align: left; color: var(--ink-read); vertical-align: top; }
+    .safelist th { background: #fffdf8; font-weight: 600; color: var(--ink); }
+    .safelist .k2 { color: var(--green); font-weight: 600; }
+    footer { text-align: center; margin-top: 88px; padding-top: 40px; border-top: 1px solid var(--hair); font-size: 0.85em; color: var(--ink-faint); }
+    footer .en { display: block; font-style: italic; color: var(--ink-en); margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+  <a class="back" href="index.html">← 回邊做邊學首頁 · Back to home</a>
+
+  <header>
+    <h1>介系詞固定搭配 + 條列式清單的平行結構
+      <span class="en">Preposition Collocations &amp; Bullet-List Parallelism</span>
+    </h1>
+  </header>
+
+  <p class="lead">
+    最後兩個補充，都是商業書信裡幾乎天天會用到、卻很少有人專門講的地方。
+    <span class="en">Two final additions — both things that show up in business email almost daily but rarely get explicitly taught.</span>
+  </p>
+
+  <!-- 主題一 -->
+  <section class="pattern">
+    <span class="tag">主題一 · PREPOSITION COLLOCATIONS</span>
+    <h2>介系詞固定搭配——多加了、少加了、選錯了
+      <span class="en-title">Preposition Collocations: Added, Dropped, or Wrong</span>
+    </h2>
+    <p class="when">介系詞是繼冠詞之後，中文母語者第二大的持續痛點——因為每個動詞、形容詞配哪個介系詞，是「約定俗成」，沒有邏輯可推。這裡挑商業書信裡最高頻的兩種錯誤方向。
+      <span class="en">Prepositions are, after articles, the second most persistent struggle for Chinese-native speakers — which preposition goes with which verb/adjective is largely arbitrary convention. Here are the two most common error directions in business email.</span>
+    </p>
+    <ul class="examples">
+      <li class="wrong">
+        <span class="num">✗ 方向一：多加了不需要的介系詞</span>
+        <div class="sentence">Let's discuss <span class="k">about</span> this issue tomorrow.</div>
+        <span class="zh">discuss 本身已經是及物動詞，後面直接接受詞，不需要 about。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確</span>
+        <div class="sentence">Let's discuss this issue tomorrow.</div>
+      </li>
+      <li class="wrong">
+        <span class="num">✗ 同方向</span>
+        <div class="sentence">Please contact <span class="k">with</span> me if you have questions.</div>
+        <span class="zh">contact 當動詞時也不需要介系詞（但當名詞用「be in contact with」時才需要 with）。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確</span>
+        <div class="sentence">Please contact me if you have questions.</div>
+      </li>
+      <li class="wrong">
+        <span class="num">✗ 方向二：漏掉必要的介系詞</span>
+        <div class="sentence">Please reply this email by Friday.</div>
+        <span class="zh">reply 是不及物動詞，回覆「某封信」需要介系詞 to 才能接受詞。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確（較複雜）</span>
+        <div class="sentence">Please reply <span class="k2">to</span> this email by Friday, and let me know whether you agree <span class="k2">with</span> the proposal, or if there's a specific point you'd like to agree <span class="k2">on</span> separately.</div>
+        <span class="zh">agree with（同意某人／某個想法）、agree on（雙方就某個決定達成共識）——同一個字，介系詞不同、意思也微妙不同，是很經典的固定搭配陷阱。</span>
+      </li>
+    </ul>
+    <div class="safelist">
+      <table>
+        <thead><tr><th>常見固定搭配</th><th>正確用法</th></tr></thead>
+        <tbody>
+          <tr><td>discuss, contact, approach, attend（後面直接接受詞，不需要介系詞）</td><td><span class="k2">discuss X（不是 discuss about X）</span></td></tr>
+          <tr><td>reply to, consist of, comply with, depend on, arrive at/in</td><td><span class="k2">固定介系詞，不能自己換</span></td></tr>
+          <tr><td>interested in, responsible for, similar to, married to, good at</td><td><span class="k2">形容詞的固定介系詞，同樣不能自己換</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 主題二 -->
+  <section class="pattern">
+    <span class="tag">主題二 · BULLET-LIST PARALLELISM</span>
+    <h2>條列式清單的平行結構
+      <span class="en-title">Keep Every Bullet Point Grammatically Parallel</span>
+    </h2>
+    <div class="formula">同一份清單裡，每一項的文法形式要一致——全部用動名詞，或全部用祈使句，不要混著用</div>
+    <p class="when">這是你已經學過的「and 平行結構」的直接延伸，只是從一句話裡的兩三個東西，放大成一整份清單。商業書信天天用 bullet points 列行動項目，一份清單裡文法形式不一致，會讓整封信讀起來不專業、卡卡的。
+      <span class="en">A direct extension of the "and" parallel-structure rule you already learned, scaled up from a few items in one sentence to an entire list. Inconsistent grammatical form across bullet points reads as unpolished.</span>
+    </p>
+    <ul class="examples">
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範（三種形式混用）</span>
+        <div class="sentence">This week's action items:</div>
+        <ul class="bullets">
+          <li>Reviewing the budget</li>
+          <li>Send the invoice</li>
+          <li>Client meeting</li>
+        </ul>
+        <span class="zh">第一項是動名詞（Reviewing）、第二項是祈使句動詞原形（Send）、第三項是名詞片語（Client meeting），三種文法形式混在一起。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確 — 全部動名詞</span>
+        <div class="sentence">This week's action items:</div>
+        <ul class="bullets">
+          <li><span class="k2">Reviewing</span> the budget</li>
+          <li><span class="k2">Sending</span> the invoice</li>
+          <li><span class="k2">Meeting</span> with the client</li>
+        </ul>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確（較複雜）— 全部祈使句，更適合行動項目清單</span>
+        <div class="sentence">Please complete the following before Friday:</div>
+        <ul class="bullets">
+          <li><span class="k2">Review</span> the budget and flag any discrepancies</li>
+          <li><span class="k2">Send</span> the invoice to the client</li>
+          <li><span class="k2">Schedule</span> a follow-up meeting</li>
+        </ul>
+        <span class="zh">行動項目清單特別適合全部用祈使句（動詞原形開頭），讀起來明確、有行動感，這也是商業英文最常見的清單寫法。</span>
+      </li>
+    </ul>
+    <div class="note">
+      <strong>快速自我檢查法</strong>：寫完清單後，把每一項的第一個字圈出來看——全部都是同一種詞性/時態嗎？只要有一項不一樣，就是破壞了平行結構。
+      <span class="en">Quick self-check: circle the first word of every bullet — are they all the same part of speech/form? If even one differs, parallelism is broken.</span>
+    </div>
+  </section>
+
+  <footer>
+    <p>由嘉瑞製作，AI 是工具，手還是自己的。
+      <span class="en">Made by Chia-jue. AI is the tool; the hands are still my own.</span>
+    </p>
+  </footer>
+
+</body>
+</html>
