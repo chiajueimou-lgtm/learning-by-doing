@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中文母語者常見的六個英文文法陷阱 · Six Common Grammar Traps for Chinese-Native English Speakers</title>
+  <style>
+    :root {
+      --paper: #f7f4ee;
+      --ink: #2b2825;
+      --ink-soft: #55504a;
+      --ink-read: #2a2621;
+      --ink-faint: #9a9084;
+      --ink-en: #2a2621;
+      --red: #b23a2e;
+      --green: #4a7a4a;
+      --hair: rgba(43, 40, 37, 0.08);
+      --tag-bg: #f0e9dc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: "Noto Serif TC", "Songti TC", "PingFang TC", "Microsoft JhengHei", serif;
+      background-color: var(--paper);
+      color: var(--ink-soft);
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 96px;
+      line-height: 1.9;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 36px;
+      color: var(--red);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(178, 58, 46, 0.35);
+      padding-bottom: 1px;
+      font-size: 0.92em;
+    }
+    .back:hover { border-bottom-color: var(--red); }
+
+    header { text-align: center; margin-bottom: 12px; }
+
+    h1 {
+      font-size: 1.5em;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 1px;
+      margin: 0 0 8px;
+      line-height: 1.4;
+    }
+
+    h1 .en {
+      display: block;
+      font-size: 0.5em;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--ink-en);
+      letter-spacing: 0.5px;
+      margin-top: 10px;
+    }
+
+    .lead {
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 0.95em;
+      margin: 24px 0 8px;
+    }
+    .lead .en {
+      display: block;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+      margin-top: 6px;
+    }
+
+    .intro {
+      margin: 40px 0;
+      padding: 28px 30px;
+      background: #fffdf8;
+      border: 1px solid var(--hair);
+      border-radius: 4px;
+    }
+    .intro p { margin: 0 0 14px; color: var(--ink-read); }
+    .intro p:last-child { margin-bottom: 0; }
+    .intro .en {
+      display: block;
+      margin-top: 5px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+    }
+
+    /* 六個陷阱總覽 */
+    .toc {
+      margin: 32px 0;
+      padding: 4px 0;
+    }
+    .toc ol { margin: 0; padding-left: 22px; color: var(--ink-read); }
+    .toc li { margin-bottom: 8px; }
+    .toc a { color: var(--ink-read); text-decoration: none; border-bottom: 1px dotted var(--ink-faint); }
+    .toc a:hover { color: var(--red); border-bottom-color: var(--red); }
+
+    .pattern {
+      margin: 56px 0;
+      padding-top: 44px;
+      border-top: 1px solid var(--hair);
+    }
+    .pattern:first-of-type { border-top: none; }
+
+    .pattern .tag {
+      display: inline-block;
+      font-size: 0.78em;
+      color: var(--red);
+      background: var(--tag-bg);
+      padding: 4px 14px;
+      border-radius: 999px;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .pattern h2 {
+      margin: 0 0 6px;
+      font-size: 1.25em;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .pattern h2 .en-title {
+      display: block;
+      font-size: 0.62em;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--ink-en);
+      margin-top: 4px;
+    }
+
+    .formula {
+      margin: 18px 0;
+      padding: 18px 24px;
+      background: #fffdf8;
+      border-left: 3px solid var(--red);
+      font-size: 1.05em;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.5px;
+    }
+
+    .pattern .when {
+      color: var(--ink-read);
+      margin: 16px 0 26px;
+    }
+    .pattern .when .en {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+    }
+    .pattern .note {
+      margin: 20px 0 0;
+      padding: 16px 20px;
+      background: var(--tag-bg);
+      border-radius: 4px;
+      font-size: 0.94em;
+      color: var(--ink-read);
+    }
+    .pattern .note .en {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+    }
+
+    .examples { list-style: none; padding: 0; margin: 0; }
+    .examples li {
+      margin-bottom: 20px;
+      padding: 18px 22px;
+      background: #fffdf8;
+      border-radius: 4px;
+      border: 1px solid var(--hair);
+    }
+    .examples li.wrong { border-left: 3px solid var(--red); }
+    .examples li.right { border-left: 3px solid var(--green); }
+    .examples li:last-child { margin-bottom: 0; }
+    .examples .num {
+      display: inline-block;
+      font-size: 0.75em;
+      color: var(--ink-faint);
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .examples li.wrong .num { color: var(--red); }
+    .examples li.right .num { color: var(--green); }
+    .examples .sentence {
+      color: var(--ink-read);
+      font-weight: 600;
+      line-height: 1.6;
+    }
+    .examples .k { color: var(--red); }
+    .examples .k2 { color: var(--green); }
+    .examples .zh {
+      display: block;
+      margin-top: 8px;
+      color: var(--ink-soft);
+      font-size: 0.94em;
+    }
+
+    .safelist {
+      margin: 24px 0;
+      overflow-x: auto;
+    }
+    .safelist table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.92em;
+    }
+    .safelist th, .safelist td {
+      border: 1px solid var(--hair);
+      padding: 12px 14px;
+      text-align: left;
+      color: var(--ink-read);
+      vertical-align: top;
+    }
+    .safelist th { background: #fffdf8; font-weight: 600; color: var(--ink); }
+    .safelist .k2 { color: var(--green); font-weight: 600; }
+
+    footer {
+      text-align: center;
+      margin-top: 88px;
+      padding-top: 40px;
+      border-top: 1px solid var(--hair);
+      font-size: 0.85em;
+      color: var(--ink-faint);
+    }
+    footer .en { display: block; font-style: italic; color: var(--ink-en); margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+  <a class="back" href="index.html">← 回邊做邊學首頁 · Back to home</a>
+
+  <header>
+    <h1>中文母語者常見的六個英文文法陷阱
+      <span class="en">Six Common Grammar Traps for Chinese-Native English Speakers</span>
+    </h1>
+  </header>
+
+  <p class="lead">
+    這篇不是從我某一句寫錯的話開始的，是反過來問：以我目前展現出來的程度、加上「中文母語者」這個變因，統計上最可能還沒發現的雷區會是什麼？六個都整理進來了。
+    <span class="en">This one didn't start from a mistake I actually made — it's the reverse: given my demonstrated level and the fact that Chinese is my native language, what are the statistically most likely blind spots I haven't caught yet? All six are here.</span>
+  </p>
+
+  <div class="intro">
+    <p>這六個陷阱背後其實只有兩個病根：①中文的動詞不隨主詞變化、名詞不分單複數，導致「主詞動詞一致」「可數/不可數」這類規則對中文母語者來說幾乎是隱形的；②中文句子習慣「意合」——用逗號把幾個念頭串在一起、或用「主題，評論」的結構——這兩種習慣直接搬進英文都會出問題。
+      <span class="en">These six traps trace back to just two root causes: Chinese verbs don't change with the subject and nouns don't mark singular/plural, so rules like subject-verb agreement and countability are nearly invisible to Chinese-native intuition. And Chinese sentences favor "parataxis" — stringing ideas together with commas, or a topic-then-comment structure — both of which cause trouble when carried directly into English.</span>
+    </p>
+  </div>
+
+  <div class="toc">
+    <ol>
+      <li><a href="#trap1">逗號拼接句（Comma Splice）</a></li>
+      <li><a href="#trap2">主詞動詞一致（Subject-Verb Agreement）</a></li>
+      <li><a href="#trap3">可數 vs 不可數名詞</a></li>
+      <li><a href="#trap4">deadline 用 until 還是 by</a></li>
+      <li><a href="#trap5">間接問句語序</a></li>
+      <li><a href="#trap6">主題—評論結構殘留</a></li>
+    </ol>
+  </div>
+
+  <!-- 陷阱一 -->
+  <section class="pattern" id="trap1">
+    <span class="tag">陷阱一 · COMMA SPLICE</span>
+    <h2>逗號拼接句
+      <span class="en-title">Comma Splices</span>
+    </h2>
+    <div class="formula">兩個各自完整的句子，不能只用一個逗號接在一起</div>
+    <p class="when">跟你已經問過的「and 前逗號規則」是同一個家族。中文習慣把幾個念頭用逗號串起來（意合），直接搬進英文文法上是錯的——兩個獨立子句中間，逗號後面要嘛加連接詞（and、but、so⋯），要嘛換成分號，要嘛乾脆拆成兩句。
+      <span class="en">Same family as the "and" comma rule you already covered. Chinese habitually strings ideas together with commas; carried directly into English, that's grammatically wrong — two independent clauses need a conjunction after the comma, a semicolon, or a full stop between them.</span>
+    </p>
+    <ul class="examples">
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">I finished the report, I sent it to the team.</div>
+        <span class="zh">兩個都是完整句子（各自有主詞動詞），中間只用逗號接，是逗號拼接句。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確 — 加連接詞</span>
+        <div class="sentence">I finished the report, <span class="k2">and</span> I sent it to the team.</div>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確 — 換分號</span>
+        <div class="sentence">I finished the report<span class="k2">;</span> I sent it to the team.</div>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確（較複雜）— 找出邏輯關係，換連接詞</span>
+        <div class="sentence">The meeting ran long, <span class="k2">so</span> we didn't have time to discuss the budget.</div>
+        <span class="zh">原本兩句只用逗號接會是拼接句；加上 so，順便把「因為⋯所以⋯」的邏輯講清楚，比單純加 and 更好。</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 陷阱二 -->
+  <section class="pattern" id="trap2">
+    <span class="tag">陷阱二 · SUBJECT-VERB AGREEMENT</span>
+    <h2>主詞動詞一致
+      <span class="en-title">Subject-Verb Agreement</span>
+    </h2>
+    <div class="formula">動詞要跟「真正的主詞」一致，不是跟離它最近的名詞一致</div>
+    <p class="when">中文動詞完全不隨主詞變化，這整條規則對中文母語者來說幾乎是「看不見」的。最容易出錯的情況：主詞和動詞中間隔了一長串修飾語，一不小心就跟旁邊的名詞而不是真正的主詞一致。
+      <span class="en">Chinese verbs never change with the subject, so this entire rule category is nearly invisible to Chinese-native intuition. The most common trap: a long modifying phrase sits between the subject and the verb, and the verb ends up agreeing with the wrong, nearby noun.</span>
+    </p>
+    <ul class="examples">
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">The list of items are on the desk.</div>
+        <span class="zh">動詞被拉去跟離它最近的 items（複數）一致了，但真正的主詞是 list（單數）。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確</span>
+        <div class="sentence">The list of items <span class="k2">is</span> on the desk.</div>
+      </li>
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">One of the reports were missing.</div>
+        <span class="zh">主詞是 one（單數），不是 reports。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確</span>
+        <div class="sentence">One of the reports <span class="k2">was</span> missing.</div>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確（較複雜）— 集合名詞</span>
+        <div class="sentence">The team <span class="k2">is</span> working on the proposal this week.</div>
+        <span class="zh">team、company、committee 這類集合名詞，美式英文通常當單數看待（英式偶爾允許複數，但商業書信照美式規則最保險）。</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 陷阱三 -->
+  <section class="pattern" id="trap3">
+    <span class="tag">陷阱三 · COUNTABLE vs UNCOUNTABLE</span>
+    <h2>可數 vs 不可數名詞
+      <span class="en-title">Countable vs. Uncountable Nouns</span>
+    </h2>
+    <div class="formula">不可數名詞永遠不能加 s，也不能直接用 a/an</div>
+    <p class="when">跟冠詞是同一個病根：中文名詞不分單複數，這幾個字幾乎每個中文母語者都加過 s。商業書信最常中招的幾個字：information、advice、feedback、equipment、furniture、news、progress。
+      <span class="en">Same root cause as articles: Chinese nouns don't mark singular/plural, so these specific words get pluralized almost universally by Chinese-native speakers. The worst offenders in business email: information, advice, feedback, equipment, furniture, news, progress.</span>
+    </p>
+    <ul class="examples">
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">Please send me some informations.</div>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確</span>
+        <div class="sentence">Please send me some <span class="k2">information</span>.</div>
+      </li>
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">I have three advices for you.</div>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確（較複雜）</span>
+        <div class="sentence">Let me give you <span class="k2">a piece of advice</span>, or better, <span class="k2">some advice</span> about the proposal.</div>
+        <span class="zh">真的需要講「幾個」不可數名詞的量，要用 a piece of / pieces of 這種量詞包裝，不能直接加 s。</span>
+      </li>
+    </ul>
+    <div class="safelist">
+      <table>
+        <thead><tr><th>商業書信最常見的不可數名詞</th><th>正確用法</th></tr></thead>
+        <tbody>
+          <tr><td>information, advice, feedback, equipment, furniture, news, progress, software</td><td><span class="k2">不加 s，量詞用 some / a piece of / a lot of</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 陷阱四 -->
+  <section class="pattern" id="trap4">
+    <span class="tag">陷阱四 · UNTIL vs BY</span>
+    <h2>deadline 用 until 還是 by
+      <span class="en-title">"Until" vs. "By" for Deadlines</span>
+    </h2>
+    <div class="formula">by + 時間 = 截止期限（一次性動作要在那之前完成）；until + 時間 = 持續到那個時間點為止</div>
+    <p class="when">你每天在寫給全公司的截止日期信，這個如果用錯，影響可能比冠詞還直接。差別在動作的性質：「交報告」是一次性完成的動作，用 by；「辦公室關閉」是持續的狀態，用 until。
+      <span class="en">You write deadline emails to the whole company daily, so this one has direct real-world impact. The distinction: "by" for a one-time action that must be complete at or before that point; "until" for a state or action that continues up to that point.</span>
+    </p>
+    <ul class="examples">
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">Please submit the report until Friday.</div>
+        <span class="zh">字面意思變成「持續交報告，交到星期五為止」——但交報告是一次性動作，這樣講不合理。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確</span>
+        <div class="sentence">Please submit the report <span class="k2">by</span> Friday.</div>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確 — until 用對的地方</span>
+        <div class="sentence">The office will be closed <span class="k2">until</span> Friday.</div>
+        <span class="zh">「關閉」是持續的狀態，一路持續到星期五，這裡 until 才是對的。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確（較複雜，兩者對比放在同一句）</span>
+        <div class="sentence">The system will be <span class="k2">under maintenance until</span> 6 PM, so please submit all requests <span class="k2">by</span> 5 PM.</div>
+        <span class="zh">系統維護是持續狀態到六點（until），但送出請求是一次性動作、要提前完成（by）。</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 陷阱五 -->
+  <section class="pattern" id="trap5">
+    <span class="tag">陷阱五 · EMBEDDED QUESTIONS</span>
+    <h2>間接問句語序
+      <span class="en-title">Word Order in Indirect (Embedded) Questions</span>
+    </h2>
+    <div class="formula">問句包進句子裡當子句時，語序要還原成「主詞 + 動詞」，不能保留問句的倒裝</div>
+    <p class="when">中文問句跟直述句語序完全一樣（「他在哪裡」跟「我不知道他在哪裡」語序不變），但英文問句會倒裝（Where is he?），包進另一個句子當子句時，卻要「還原」回直述句語序——這個反直覺的地方，很多中文母語者一輩子沒發現。
+      <span class="en">Chinese question word order is identical whether standalone or embedded. English inverts for standalone questions (Where is he?) but must revert to statement order once embedded in another sentence — a counter-intuitive switch many Chinese speakers never catch.</span>
+    </p>
+    <ul class="examples">
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">I don't know where is he.</div>
+        <span class="zh">保留了問句的倒裝語序（is he），但這裡是包在 "I don't know" 裡的子句，要還原成直述句語序。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確</span>
+        <div class="sentence">I don't know <span class="k2">where he is</span>.</div>
+      </li>
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">Could you tell me what time does the meeting start?</div>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確（較複雜）</span>
+        <div class="sentence">Could you tell me <span class="k2">what time the meeting starts</span>, and whether it has been confirmed?</div>
+        <span class="zh">連著兩個間接問句都要用直述句語序：what time the meeting starts（不是 does the meeting start），whether it has been confirmed（不是問句倒裝）。</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 陷阱六 -->
+  <section class="pattern" id="trap6">
+    <span class="tag">陷阱六 · TOPIC-COMMENT TRANSFER</span>
+    <h2>主題—評論結構殘留
+      <span class="en-title">Topic-Comment Structure Carried Over from Chinese</span>
+    </h2>
+    <div class="formula">英文一個子句只能有一個主詞——不能先講一個「主題」，後面子句又重複一個代名詞當主詞</div>
+    <p class="when">中文很自然會先丟出一個主題，再用一個完整句子去評論它（「我爸爸，他在銀行工作」）。這個結構直接搬進英文，會變成同一個子句裡有兩個主詞（father 跟 he），文法上是錯的——英文要嘛把代名詞拿掉，要嘛整句重新組織。
+      <span class="en">Chinese naturally states a topic, then comments on it with a full clause that repeats a pronoun subject. Carried directly into English, this creates a double subject in one clause — ungrammatical. English either drops the redundant pronoun or restructures the sentence entirely.</span>
+    </p>
+    <ul class="examples">
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">My father, he works in a bank.</div>
+        <span class="zh">father 跟 he 其實是同一個人，卻在同一個子句裡出現兩次當主詞。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確</span>
+        <div class="sentence">My father <span class="k2">works</span> in a bank.</div>
+        <span class="zh">直接把多餘的代名詞拿掉就對了。</span>
+      </li>
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">The report that I sent yesterday, it has some errors.</div>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確（較複雜，需要整句重組）</span>
+        <div class="sentence">The new policy, everyone thinks it is unfair.</div>
+        <span class="zh">→ <strong>Everyone thinks the new policy is unfair.</strong> 這種情況不能只是刪代名詞，要把整句重新組織，讓 the new policy 變成從屬子句裡的受詞，而不是句首單獨晾著的主題。</span>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>由嘉瑞製作，AI 是工具，手還是自己的。
+      <span class="en">Made by Chia-jue. AI is the tool; the hands are still my own.</span>
+    </p>
+  </footer>
+
+</body>
+</html>
