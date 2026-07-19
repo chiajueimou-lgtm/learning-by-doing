@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>連接詞 and 的用法：形式一致 + 逗號規則 · Using "And": Parallel Structure &amp; Comma Rules</title>
+  <style>
+    :root {
+      --paper: #f7f4ee;
+      --ink: #2b2825;
+      --ink-soft: #55504a;
+      --ink-read: #2a2621;
+      --ink-faint: #9a9084;
+      --ink-en: #2a2621;
+      --red: #b23a2e;
+      --green: #4a7a4a;
+      --hair: rgba(43, 40, 37, 0.08);
+      --tag-bg: #f0e9dc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: "Noto Serif TC", "Songti TC", "PingFang TC", "Microsoft JhengHei", serif;
+      background-color: var(--paper);
+      color: var(--ink-soft);
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 96px;
+      line-height: 1.9;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 36px;
+      color: var(--red);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(178, 58, 46, 0.35);
+      padding-bottom: 1px;
+      font-size: 0.92em;
+    }
+    .back:hover { border-bottom-color: var(--red); }
+
+    header { text-align: center; margin-bottom: 12px; }
+
+    h1 {
+      font-size: 1.7em;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 1px;
+      margin: 0 0 8px;
+      line-height: 1.4;
+    }
+
+    h1 .en {
+      display: block;
+      font-size: 0.5em;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--ink-en);
+      letter-spacing: 0.5px;
+      margin-top: 10px;
+    }
+
+    .lead {
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 0.95em;
+      margin: 24px 0 8px;
+    }
+    .lead .en {
+      display: block;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+      margin-top: 6px;
+    }
+
+    .intro {
+      margin: 40px 0;
+      padding: 28px 30px;
+      background: #fffdf8;
+      border: 1px solid var(--hair);
+      border-radius: 4px;
+    }
+    .intro p { margin: 0 0 14px; color: var(--ink-read); }
+    .intro p:last-child { margin-bottom: 0; }
+    .intro .en {
+      display: block;
+      margin-top: 5px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+    }
+
+    .pattern {
+      margin: 56px 0;
+      padding-top: 44px;
+      border-top: 1px solid var(--hair);
+    }
+    .pattern:first-of-type { border-top: none; }
+
+    .pattern .tag {
+      display: inline-block;
+      font-size: 0.78em;
+      color: var(--red);
+      background: var(--tag-bg);
+      padding: 4px 14px;
+      border-radius: 999px;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .pattern h2 {
+      margin: 0 0 6px;
+      font-size: 1.25em;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .pattern h2 .en-title {
+      display: block;
+      font-size: 0.62em;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--ink-en);
+      margin-top: 4px;
+    }
+
+    .formula {
+      margin: 18px 0;
+      padding: 18px 24px;
+      background: #fffdf8;
+      border-left: 3px solid var(--red);
+      font-size: 1.05em;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.5px;
+    }
+
+    .pattern .when {
+      color: var(--ink-read);
+      margin: 16px 0 26px;
+    }
+    .pattern .when .en {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+    }
+
+    .examples { list-style: none; padding: 0; margin: 0; }
+    .examples li {
+      margin-bottom: 20px;
+      padding: 18px 22px;
+      background: #fffdf8;
+      border-radius: 4px;
+      border: 1px solid var(--hair);
+    }
+    .examples li.wrong { border-left: 3px solid var(--red); }
+    .examples li.right { border-left: 3px solid var(--green); }
+    .examples li:last-child { margin-bottom: 0; }
+    .examples .num {
+      display: inline-block;
+      font-size: 0.75em;
+      color: var(--ink-faint);
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .examples li.wrong .num { color: var(--red); }
+    .examples li.right .num { color: var(--green); }
+    .examples .sentence {
+      color: var(--ink-read);
+      font-weight: 600;
+      line-height: 1.6;
+    }
+    .examples .k { color: var(--red); }
+    .examples .k2 { color: var(--green); }
+    .examples .zh {
+      display: block;
+      margin-top: 8px;
+      color: var(--ink-soft);
+      font-size: 0.94em;
+    }
+
+    .test-box {
+      margin: 24px 0;
+      padding: 22px 26px;
+      background: var(--tag-bg);
+      border-radius: 4px;
+      color: var(--ink-read);
+      font-weight: 600;
+    }
+    .test-box .en {
+      display: block;
+      margin-top: 6px;
+      font-weight: normal;
+      font-style: italic;
+      font-size: 0.88em;
+      color: var(--ink-en);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 88px;
+      padding-top: 40px;
+      border-top: 1px solid var(--hair);
+      font-size: 0.85em;
+      color: var(--ink-faint);
+    }
+    footer .en { display: block; font-style: italic; color: var(--ink-en); margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+  <a class="back" href="index.html">← 回邊做邊學首頁 · Back to home</a>
+
+  <header>
+    <h1>連接詞 and 的用法：形式一致 + 逗號規則
+      <span class="en">Using "And": Parallel Structure &amp; Comma Rules</span>
+    </h1>
+  </header>
+
+  <p class="lead">
+    用 and 連接兩件事，常見的困惑其實是兩個完全不同的問題——文法形式要不要一致，還有前面要不要加逗號。這篇筆記把它們拆開講清楚，順便解釋 Word 的文法檢查工具到底在跳出來提醒什麼。
+    <span class="en">Confusion around "and" usually comes from two unrelated questions — does the grammar on both sides need to match, and does it need a comma before it. This note separates the two, and explains what Word's grammar checker is actually flagging.</span>
+  </p>
+
+  <!-- 規則一 -->
+  <section class="pattern">
+    <span class="tag">規則一 · PARALLEL STRUCTURE</span>
+    <h2>動詞形式要一致
+      <span class="en-title">Keep Both Sides Grammatically Parallel</span>
+    </h2>
+    <div class="formula">A and B → 兩邊的文法形式必須對稱（同時態、同詞性、同結構）</div>
+    <p class="when">你問的「時態要一致」，其實是更大一條規則的一部分，叫「平行結構」：and 連接的兩個東西，不管是動詞、名詞、還是介系詞片語，文法形式都要對稱，讀起來才通順、才正確。
+      <span class="en">What you're describing as "tense agreement" is really part of a bigger rule called parallel structure: whatever "and" connects — verbs, nouns, prepositional phrases — must match in grammatical form.</span>
+    </p>
+    <ul class="examples">
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">She cooked dinner <span class="k">and cleans</span> the kitchen.</div>
+        <span class="zh">一邊過去式（cooked）、一邊現在式（cleans），兩邊時態不對稱。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確</span>
+        <div class="sentence">She cooked dinner <span class="k2">and cleaned</span> the kitchen.</div>
+        <span class="zh">兩個動詞都用過去式，對稱了。</span>
+      </li>
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">I like reading books <span class="k">and to watch</span> movies.</div>
+        <span class="zh">一邊動名詞（reading）、一邊不定詞（to watch），詞性不對稱。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確（較複雜）</span>
+        <div class="sentence">The report was thorough, well-organized, <span class="k2">and</span> persuasively argued.</div>
+        <span class="zh">三個並列的形容詞性描述，結構完全對稱，讀起來才順。</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 規則二 -->
+  <section class="pattern">
+    <span class="tag">規則二 · THE COMMA QUESTION</span>
+    <h2>and 前面要不要加逗號？——兩種完全不同的情況
+      <span class="en-title">Comma Before "And": Two Different Situations</span>
+    </h2>
+    <div class="test-box">
+      判斷方法只要問一句話：「and 兩邊，各自都有自己的主詞、能不能獨立成一個完整句子？」
+      <span class="en">The test: can BOTH sides of "and" stand alone as a complete sentence, each with its own subject?</span>
+    </div>
+    <p class="when">兩邊都可以獨立成句 → <strong>要加逗號</strong>。只有一個主詞、後半段沒有自己的主詞 → <strong>不加逗號</strong>。Word 的文法檢查通常就是在抓這個區別——它不是每次都對，但這條規則能幫你判斷該不該聽它的。
+      <span class="en">Both sides independent → add a comma. Only one shared subject → no comma. This is exactly what Word's grammar checker is trying to detect — it isn't always right, but knowing the rule lets you judge for yourself.</span>
+    </p>
+    <ul class="examples">
+      <li class="right">
+        <span class="num">✓ 要加逗號 — 兩個獨立子句</span>
+        <div class="sentence">I finished my homework<span class="k2">,</span> and my sister started hers.</div>
+        <span class="zh">「I finished my homework」和「my sister started hers」各自有主詞，都能獨立成句 → 要逗號。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 要加逗號</span>
+        <div class="sentence">The rain stopped<span class="k2">,</span> and the sun came out.</div>
+        <span class="zh">兩個主詞（the rain / the sun），兩邊都是完整句子。</span>
+      </li>
+      <li class="wrong">
+        <span class="num">✗ 不加逗號 — 只有一個主詞（複合述語）</span>
+        <div class="sentence">I finished my homework and went to bed.</div>
+        <span class="zh">只有一個主詞「I」，「went to bed」沒有自己的主詞，不是獨立子句 → 不加逗號。</span>
+      </li>
+      <li class="wrong">
+        <span class="num">✗ 不加逗號（較複雜）</span>
+        <div class="sentence">The committee reviewed the proposal for nearly an hour and ultimately rejected it.</div>
+        <span class="zh">主詞只有「the committee」一個，共用給兩個動詞（reviewed / rejected），不加逗號。</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 規則三 -->
+  <section class="pattern">
+    <span class="tag">規則三 · STYLE, NOT GRAMMAR</span>
+    <h2>列舉清單時的逗號——序列逗號（Oxford comma）
+      <span class="en-title">The Serial (Oxford) Comma</span>
+    </h2>
+    <div class="formula">A, B, and C（美式常見） 或 A, B and C（英式常見）</div>
+    <p class="when">這條常常跟規則二搞混，但情境不一樣——這是「列舉三個以上東西」時，最後一個 and 前面要不要加逗號，純粹是<strong>文風選擇</strong>，兩種寫法都不算文法錯誤。學術寫作（APA、Chicago 格式）通常建議加，新聞寫作常常不加。
+      <span class="en">Often confused with Rule 2, but this is different: when listing three or more items, the comma before the final "and" is a style choice, not a grammar error either way. Academic style guides (APA, Chicago) tend to include it; journalistic style often omits it.</span>
+    </p>
+    <ul class="examples">
+      <li>
+        <span class="num">例句 ①（有序列逗號）</span>
+        <div class="sentence">I bought apples, oranges<span class="k">,</span> and bananas.</div>
+        <span class="zh">我買了蘋果、橘子，還有香蕉。</span>
+      </li>
+      <li>
+        <span class="num">例句 ②（沒有，也對）</span>
+        <div class="sentence">I bought apples, oranges and bananas.</div>
+        <span class="zh">兩種寫法都正確，純粹風格差異。</span>
+      </li>
+      <li>
+        <span class="num">例句 ③（序列逗號能避免歧義的經典例子）</span>
+        <div class="sentence">I'd like to thank my parents, Oprah<span class="k">,</span> and God.</div>
+        <span class="zh">加了逗號，清楚是感謝三個對象。若寫成「my parents, Oprah and God」，可能被誤讀成「我父母的名字叫 Oprah 和 God」——這是支持序列逗號的人最愛舉的例子。</span>
+      </li>
+    </ul>
+  </section>
+
+  <div class="intro" style="margin-top:56px;">
+    <p><strong>順便一提</strong>：傳統教學說正式寫作不能用 And 當句子開頭，但這其實只是文體慣例，不是文法錯誤——現代寫作（包括很多正式場合）常常用句首的 And 製造強調或停頓的效果。不用太緊張。
+      <span class="en">One more note: the old rule against starting a sentence with "And" is a style convention, not a grammar error — modern writing (even fairly formal writing) uses it often for emphasis or pacing. No need to worry about it.</span>
+    </p>
+  </div>
+
+  <footer>
+    <p>由嘉瑞製作，AI 是工具，手還是自己的。
+      <span class="en">Made by Chia-jue. AI is the tool; the hands are still my own.</span>
+    </p>
+  </footer>
+
+</body>
+</html>
