@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>動詞時態的先後順序：現在完成式 vs 過去完成式 · Sequencing Tenses: Present Perfect vs. Past Perfect</title>
+  <style>
+    :root {
+      --paper: #f7f4ee;
+      --ink: #2b2825;
+      --ink-soft: #55504a;
+      --ink-read: #2a2621;
+      --ink-faint: #9a9084;
+      --ink-en: #2a2621;
+      --red: #b23a2e;
+      --green: #4a7a4a;
+      --hair: rgba(43, 40, 37, 0.08);
+      --tag-bg: #f0e9dc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: "Noto Serif TC", "Songti TC", "PingFang TC", "Microsoft JhengHei", serif;
+      background-color: var(--paper);
+      color: var(--ink-soft);
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 96px;
+      line-height: 1.9;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 36px;
+      color: var(--red);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(178, 58, 46, 0.35);
+      padding-bottom: 1px;
+      font-size: 0.92em;
+    }
+    .back:hover { border-bottom-color: var(--red); }
+
+    header { text-align: center; margin-bottom: 12px; }
+
+    h1 {
+      font-size: 1.6em;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 1px;
+      margin: 0 0 8px;
+      line-height: 1.4;
+    }
+
+    h1 .en {
+      display: block;
+      font-size: 0.5em;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--ink-en);
+      letter-spacing: 0.5px;
+      margin-top: 10px;
+    }
+
+    .lead {
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 0.95em;
+      margin: 24px 0 8px;
+    }
+    .lead .en {
+      display: block;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+      margin-top: 6px;
+    }
+
+    .intro {
+      margin: 40px 0;
+      padding: 28px 30px;
+      background: #fffdf8;
+      border: 1px solid var(--hair);
+      border-radius: 4px;
+    }
+    .intro p { margin: 0 0 14px; color: var(--ink-read); }
+    .intro p:last-child { margin-bottom: 0; }
+    .intro .en {
+      display: block;
+      margin-top: 5px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+    }
+
+    .pattern {
+      margin: 56px 0;
+      padding-top: 44px;
+      border-top: 1px solid var(--hair);
+    }
+    .pattern:first-of-type { border-top: none; }
+
+    .pattern .tag {
+      display: inline-block;
+      font-size: 0.78em;
+      color: var(--red);
+      background: var(--tag-bg);
+      padding: 4px 14px;
+      border-radius: 999px;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .pattern h2 {
+      margin: 0 0 6px;
+      font-size: 1.25em;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .pattern h2 .en-title {
+      display: block;
+      font-size: 0.62em;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--ink-en);
+      margin-top: 4px;
+    }
+
+    .formula {
+      margin: 18px 0;
+      padding: 18px 24px;
+      background: #fffdf8;
+      border-left: 3px solid var(--red);
+      font-size: 1.05em;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.5px;
+    }
+
+    .pattern .when {
+      color: var(--ink-read);
+      margin: 16px 0 26px;
+    }
+    .pattern .when .en {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+    }
+    .pattern .note {
+      margin: 20px 0 0;
+      padding: 16px 20px;
+      background: var(--tag-bg);
+      border-radius: 4px;
+      font-size: 0.94em;
+      color: var(--ink-read);
+    }
+    .pattern .note .en {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+    }
+
+    .examples { list-style: none; padding: 0; margin: 0; }
+    .examples li {
+      margin-bottom: 20px;
+      padding: 18px 22px;
+      background: #fffdf8;
+      border-radius: 4px;
+      border: 1px solid var(--hair);
+    }
+    .examples li.wrong { border-left: 3px solid var(--red); }
+    .examples li.right { border-left: 3px solid var(--green); }
+    .examples li:last-child { margin-bottom: 0; }
+    .examples .num {
+      display: inline-block;
+      font-size: 0.75em;
+      color: var(--ink-faint);
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .examples li.wrong .num { color: var(--red); }
+    .examples li.right .num { color: var(--green); }
+    .examples .sentence {
+      color: var(--ink-read);
+      font-weight: 600;
+      line-height: 1.6;
+    }
+    .examples .k { color: var(--red); }
+    .examples .k2 { color: var(--green); }
+    .examples .zh {
+      display: block;
+      margin-top: 8px;
+      color: var(--ink-soft);
+      font-size: 0.94em;
+    }
+
+    /* 對比組：同一情境，兩種時態，意思不同 */
+    .minimal-pair {
+      margin: 24px 0;
+      display: grid;
+      gap: 14px;
+    }
+    .minimal-pair .row {
+      padding: 18px 22px;
+      background: #fffdf8;
+      border-radius: 4px;
+      border: 1px solid var(--hair);
+    }
+    .minimal-pair .sentence { color: var(--ink-read); font-weight: 600; }
+    .minimal-pair .k { color: var(--red); }
+    .minimal-pair .zh { display: block; margin-top: 6px; color: var(--ink-soft); font-size: 0.94em; }
+    .minimal-pair .vs { text-align: center; color: var(--ink-faint); font-size: 0.85em; letter-spacing: 2px; }
+
+    /* 訊號詞小抄 */
+    .cheat {
+      margin: 36px 0;
+      overflow-x: auto;
+    }
+    .cheat table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.92em;
+    }
+    .cheat th, .cheat td {
+      border: 1px solid var(--hair);
+      padding: 12px 14px;
+      text-align: left;
+      color: var(--ink-read);
+      vertical-align: top;
+    }
+    .cheat th { background: #fffdf8; font-weight: 600; color: var(--ink); }
+    .cheat .k { color: var(--red); font-weight: 600; }
+
+    footer {
+      text-align: center;
+      margin-top: 88px;
+      padding-top: 40px;
+      border-top: 1px solid var(--hair);
+      font-size: 0.85em;
+      color: var(--ink-faint);
+    }
+    footer .en { display: block; font-style: italic; color: var(--ink-en); margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+  <a class="back" href="index.html">← 回邊做邊學首頁 · Back to home</a>
+
+  <header>
+    <h1>動詞時態的先後順序：現在完成式 vs 過去完成式
+      <span class="en">Sequencing Tenses: Present Perfect vs. Past Perfect</span>
+    </h1>
+  </header>
+
+  <p class="lead">
+    簡單現在式、過去式、未來式都沒問題，卡住的地方是「句子牽涉到不同時間點」的時候——這篇筆記把現在完成式跟過去完成式分開講清楚，順便釐清一個很多人都會有的誤會。
+    <span class="en">Simple present, past, and future are no problem — the trouble starts when a sentence involves more than one point in time. This note separates present perfect from past perfect, and clears up a mix-up almost everyone runs into.</span>
+  </p>
+
+  <div class="intro">
+    <p><strong>先澄清一個常見的誤會</strong>：「兩個動作，一個用⋯⋯一個用過去式」這條規則，其實屬於<strong>過去完成式</strong>，不是現在完成式。這兩個名字太像、結構也很像（都是 have/had + 過去分詞），幾乎每個學英文的人都混過。
+      <span class="en">A common mix-up to clear up first: the "two actions, one gets X, one gets simple past" rule belongs to the <strong>past perfect</strong>, not the present perfect. The two names look alike and both use have/had + past participle — almost everyone confuses them at some point.</span>
+    </p>
+    <p>這篇筆記分三步驟：①先分清楚簡單過去式跟現在完成式的界線；②過去完成式怎麼處理「過去的過去」；③一張訊號詞小抄，看到特定的字就知道該用哪個時態。
+      <span class="en">Three steps: ① the line between simple past and present perfect; ② how past perfect handles "the past of the past"; ③ a signal-word cheat sheet.</span>
+    </p>
+  </div>
+
+  <!-- 第一步 -->
+  <section class="pattern">
+    <span class="tag">第一步 · SIMPLE PAST vs PRESENT PERFECT</span>
+    <h2>簡單過去式 vs 現在完成式
+      <span class="en-title">The Line Between Simple Past and Present Perfect</span>
+    </h2>
+    <div class="formula">有講出「確切時間點」→ 簡單過去式；沒有講確切時間點 → 現在完成式（have/has + 過去分詞）</div>
+    <p class="when">判斷方法很簡單，只問一句：這句話有沒有說出「什麼時候」？yesterday、last year、in 2020、when I was 10 這種明確時間點，一律用簡單過去式。現在完成式剛好相反——它<strong>絕對不能</strong>跟明確時間點一起出現。
+      <span class="en">One test: does the sentence name a specific "when"? Words like yesterday, last year, in 2020, when I was 10 always call for simple past. Present perfect is the opposite — it can never appear together with a specific time marker.</span>
+    </p>
+    <ul class="examples">
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">I <span class="k">have visited</span> Paris <span class="k">in 2019</span>.</div>
+        <span class="zh">現在完成式（have visited）跟明確時間點（in 2019）衝突了，不能同時出現。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確 — 有明確時間</span>
+        <div class="sentence">I <span class="k2">visited</span> Paris in 2019.</div>
+        <span class="zh">講出了確切年份，用簡單過去式。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確 — 沒有明確時間</span>
+        <div class="sentence">I <span class="k2">have visited</span> Paris.</div>
+        <span class="zh">沒講何時，強調「人生經驗裡去過」，用現在完成式。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確（較複雜）</span>
+        <div class="sentence">I <span class="k2">have lived</span> in this city for eight years.</div>
+        <span class="zh">「for eight years」講的是持續到現在的一段時間長度，不是過去某個時間點，所以還是現在完成式——而且這件事現在還在繼續。</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 第二步 -->
+  <section class="pattern">
+    <span class="tag">第二步 · PAST PERFECT</span>
+    <h2>過去完成式——「過去的過去」
+      <span class="en-title">Past Perfect: The Past of the Past</span>
+    </h2>
+    <div class="formula">had + 過去分詞 — 描述比另一件過去的事，發生得更早的事件</div>
+    <p class="when">你已經在講一件過去的事了（這是故事的「主要時間軸」），這時候如果要提到<strong>比這件事更早發生</strong>的另一件事，那件更早的事就用過去完成式；比較晚發生、比較靠近故事「現在」的那件事，用簡單過去式。這就是你記得的「兩個動作」規則。
+      <span class="en">Once you're already narrating in the past (the story's "main timeline"), if you need to mention something that happened even earlier, that earlier event gets past perfect; the later one — closer to the story's "now" — stays simple past. This is the "two actions" rule you remembered.</span>
+    </p>
+    <ul class="examples">
+      <li>
+        <span class="num">例句 ①</span>
+        <div class="sentence">By the time I arrived, the meeting <span class="k">had</span> already <span class="k">started</span>.</div>
+        <span class="zh">開會在先（had started），我抵達在後（arrived，簡單過去式）。</span>
+      </li>
+    </ul>
+
+    <div class="minimal-pair">
+      <p style="margin:0 0 4px; font-weight:600; color:var(--ink);">同一個情境，時態一換，意思完全不同：
+        <span style="display:block; font-weight:normal; font-style:italic; font-size:0.85em; color:var(--ink-en);">Same situation, different tense, different meaning:</span>
+      </p>
+      <div class="row">
+        <div class="sentence">When I arrived, she <span class="k">left</span>.</div>
+        <span class="zh">她大概是我到的時候才走，兩件事幾乎同時發生。</span>
+      </div>
+      <div class="vs">相對於 · VS</div>
+      <div class="row">
+        <div class="sentence">When I arrived, she <span class="k">had left</span>.</div>
+        <span class="zh">她早就走了——在我抵達之前，她已經離開了。</span>
+      </div>
+    </div>
+
+    <ul class="examples">
+      <li>
+        <span class="num">例句 ③（較複雜）</span>
+        <div class="sentence">She <span class="k">had</span> never <span class="k">seen</span> snow before she <span class="k">moved</span> to Canada.</div>
+        <span class="zh">「從沒看過雪」是更早、持續到某個過去時間點為止的狀態（had never seen），「搬去加拿大」是那個時間點本身（moved，簡單過去式）。</span>
+      </li>
+    </ul>
+
+    <div class="note">
+      <strong>不用緊張，不是每次都「非用不可」</strong>：如果句子裡已經有 before / after / when 這種清楚表明順序的連接詞，很多時候簡單過去式就夠了，過去完成式是用來加強、讓順序更明確，不是強制規定。比如「After I finished dinner, I watched TV.」兩個動詞都用簡單過去式也完全正確，因為 after 已經把順序講清楚了。
+      <span class="en">Not always mandatory: if the sentence already has a clear sequencing word like before/after/when, simple past on both sides is often fine — past perfect just adds extra clarity. "After I finished dinner, I watched TV" is perfectly correct with simple past throughout, because "after" already does the ordering work.</span>
+    </div>
+  </section>
+
+  <!-- 加碼 -->
+  <section class="pattern">
+    <span class="tag">加碼 · PAST PERFECT CONTINUOUS（選讀）</span>
+    <h2>過去完成進行式——想知道更多再看
+      <span class="en-title">Past Perfect Continuous, If You Want to Go Further</span>
+    </h2>
+    <div class="formula">had been + 動詞-ing — 強調在某個過去時間點之前，持續進行了一段時間的動作</div>
+    <p class="when">過去完成式著重「做完了」；過去完成進行式著重「做了多久」。不是核心規則，看個概念就好。
+      <span class="en">Past perfect emphasizes that something was completed; past perfect continuous emphasizes how long it had been going on. Not a core rule — just good to recognize.</span>
+    </p>
+    <ul class="examples">
+      <li>
+        <span class="num">例句</span>
+        <div class="sentence">I <span class="k">had been waiting</span> for two hours when the bus finally came.</div>
+        <span class="zh">強調「等了兩小時」這段持續的時間，不只是「等完了」而已。</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 訊號詞小抄 -->
+  <section class="pattern">
+    <span class="tag">第三步 · CHEAT SHEET</span>
+    <h2>訊號詞小抄
+      <span class="en-title">Signal-Word Cheat Sheet</span>
+    </h2>
+    <p class="when">看到這些字，通常就能猜到該用哪個時態。
+      <span class="en">Spot these words and you can usually guess the right tense.</span>
+    </p>
+    <div class="cheat">
+      <table>
+        <thead>
+          <tr><th>時態</th><th>常見訊號詞</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>簡單過去式</td>
+            <td>yesterday, last week/year, in 2020, when I was 10（任何講明確時間點的詞）</td>
+          </tr>
+          <tr>
+            <td>現在完成式</td>
+            <td><span class="k">already, just, yet, ever, never, since, for, so far, up to now</span></td>
+          </tr>
+          <tr>
+            <td>過去完成式</td>
+            <td><span class="k">by the time, before, after, already（過去語境）, just（過去語境）, never ... before, once</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p>由嘉瑞製作，AI 是工具，手還是自己的。
+      <span class="en">Made by Chia-jue. AI is the tool; the hands are still my own.</span>
+    </p>
+  </footer>
+
+</body>
+</html>
