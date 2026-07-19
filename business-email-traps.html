@@ -281,35 +281,46 @@
 
   <!-- 陷阱一 -->
   <section class="pattern">
-    <span class="tag">陷阱一 · DANGLING OPENERS</span>
-    <h2>固定開頭片語的「懸垂修飾語」
-      <span class="en-title">Fixed Opener Phrases &amp; Dangling Modifiers</span>
+    <span class="tag">陷阱一 · DANGLING MODIFIERS</span>
+    <h2>懸垂修飾語——不只是 Enclosed
+      <span class="en-title">Dangling Modifiers: The General Rule</span>
     </h2>
-    <p class="when">商業書信有一小組固定的開頭片語（Enclosed、Attached、Regarding⋯），很多人是把它們當「模板」背下來直接套用，沒搞懂背後的文法邏輯，結果套錯了結構——這種字放在句首時，文法上應該修飾後面那個「東西」（附件、行事曆），不是修飾「我」。
-      <span class="en">Business emails rely on a small set of fixed openers (Enclosed, Attached, Regarding...) that get memorized as templates without understanding the grammar underneath — so they get slotted into the wrong structure. Placed at the start of a sentence, these words should grammatically modify the thing being attached, not "I."</span>
+    <div class="formula">句首的 -ing / -ed 分詞片語，邏輯上「做動作的人」必須跟後面主要子句的主詞是同一個人</div>
+    <p class="when"><strong>核心規則</strong>：句子開頭如果用現在分詞（-ing）或過去分詞（-ed）帶出一個片語，逗號後面主要子句的主詞，一定要是「做那個動作的人」。如果不是，兩件事的主詞其實是不同人，句子邏輯就會荒謬地錯位——這就叫懸垂修飾語（dangling modifier）。Enclosed 開頭只是這條規則的一個特例。
+      <span class="en">The core rule: if a sentence opens with a present or past participle phrase, the subject right after the comma must be the one actually performing that action. If it isn't — if the two clauses secretly have two different "doers" — the logic breaks. The Enclosed/Attached case is just one special instance of this.</span>
     </p>
     <ul class="examples">
       <li class="wrong">
-        <span class="num">✗ 錯誤示範（懸垂修飾語）</span>
+        <span class="num">✗ 錯誤示範（經典款）</span>
+        <div class="sentence">Reviewing the attached invoice, there seems to be an error in the total.</div>
+        <span class="zh">字面邏輯上，是「there」在做 reviewing 這個動作——但 there 不是人，沒辦法審查發票。做審查動作的其實是「我」，卻沒出現在主要子句的主詞位置。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確</span>
+        <div class="sentence">Reviewing the attached invoice, I noticed an error in the total.</div>
+        <span class="zh">主要子句的主詞換成「I」——就是實際做審查動作的人，邏輯就對上了。</span>
+      </li>
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範（較複雜）</span>
+        <div class="sentence">Having worked at the company for ten years, the new policy came as a surprise to him.</div>
+        <span class="zh">字面邏輯上，是「the new policy」在公司工作了十年——但政策不會「工作」，在公司工作十年的是「他」，卻被擠到句尾去了。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確</span>
+        <div class="sentence">Having worked at the company for ten years, he was surprised by the new policy.</div>
+        <span class="zh">主要子句的主詞換成「he」，邏輯終於對上：是他工作了十年，也是他感到意外。</span>
+      </li>
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範（Enclosed，前面提過的特例）</span>
         <div class="sentence">Enclosed I'm sending you the calendar.</div>
         <span class="zh">字面邏輯上，Enclosed 變成在修飾「I」——但「我」不是被附上的東西，是行事曆。</span>
       </li>
-      <li class="right">
-        <span class="num">✓ 正確 — 固定搭配</span>
-        <div class="sentence">Enclosed, please find the calendar.</div>
-        <span class="zh">Enclosed 後面接祈使句 please find，這是固定搭配，加逗號。</span>
-      </li>
-      <li class="right">
-        <span class="num">✓ 正確 — 表語倒裝</span>
-        <div class="sentence">Enclosed is the calendar for your review.</div>
-        <span class="zh">Enclosed 當表語形容詞，主詞倒裝（相當於 "The calendar is enclosed"）。</span>
-      </li>
-      <li class="right">
-        <span class="num">✓ 正確（較複雜，也是最推薦的現代寫法）</span>
-        <div class="sentence">I'm sending you the calendar, updated as of today, for your reference.</div>
-        <span class="zh">乾脆不用 Enclosed，直接用 sending 當主要動詞——現代商業英文越來越少用 "Enclosed/Attached please find" 這種老派句型。</span>
-      </li>
     </ul>
+
+    <div class="note">
+      <strong>兩種修法，任選一種</strong>：①把主要子句的主詞換成「真正做動作的人」（上面例句②③就是這樣修的）；②乾脆把開頭的分詞片語展開成完整子句，自己補上主詞。例如 "Reviewing the invoice..." 可以展開成 "While I was reviewing the invoice, I noticed..."——比較囉唆，但絕對不會出錯。
+      <span class="en">Two fixes: either make the main clause's subject the actual doer of the action, or expand the opening phrase into a full clause with its own explicit subject ("While I was reviewing...").</span>
+    </div>
 
     <div class="safelist">
       <table>
@@ -421,8 +432,8 @@
       <span style="display:block; font-weight:normal; font-style:italic; font-size:0.75em; margin-top:4px; color:var(--ink-en);">Pre-Send Checklist</span>
     </h2>
     <ol>
-      <li>句首有沒有 Enclosed / Attached / Regarding 這類字？接的結構對嗎？（還是乾脆改用 "I'm sending you..." 最保險）
-        <span class="en">Does the opener match a safe fixed structure — or would "I'm sending you..." be simpler and safer?</span>
+      <li>句首是不是用了 -ing 或 -ed 開頭的片語（Reviewing.../Having finished.../Enclosed...）？逗號後面主要子句的主詞，是不是「真正做那個動作的人」？
+        <span class="en">Does the sentence open with an -ing/-ed phrase? Is the subject right after the comma the one actually performing that action?</span>
       </li>
       <li>每個名詞前面，讀者知不知道我講的確切是哪一個？知道 → the；不知道、第一次提 → a/an；泛指、不可數 → 不加。
         <span class="en">For every noun: does the reader know exactly which one? Known → the; new/unspecified → a/an; generic/uncountable → no article.</span>
