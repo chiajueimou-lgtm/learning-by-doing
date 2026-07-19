@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>副詞的排列順序：一大串副詞該怎麼排 · Adverb Order: Sequencing Multiple Adverbials</title>
+  <style>
+    :root {
+      --paper: #f7f4ee;
+      --ink: #2b2825;
+      --ink-soft: #55504a;
+      --ink-read: #2a2621;
+      --ink-faint: #9a9084;
+      --ink-en: #2a2621;
+      --red: #b23a2e;
+      --green: #4a7a4a;
+      --hair: rgba(43, 40, 37, 0.08);
+      --tag-bg: #f0e9dc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: "Noto Serif TC", "Songti TC", "PingFang TC", "Microsoft JhengHei", serif;
+      background-color: var(--paper);
+      color: var(--ink-soft);
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 96px;
+      line-height: 1.9;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 36px;
+      color: var(--red);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(178, 58, 46, 0.35);
+      padding-bottom: 1px;
+      font-size: 0.92em;
+    }
+    .back:hover { border-bottom-color: var(--red); }
+
+    header { text-align: center; margin-bottom: 12px; }
+
+    h1 {
+      font-size: 1.55em;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 1px;
+      margin: 0 0 8px;
+      line-height: 1.4;
+    }
+
+    h1 .en {
+      display: block;
+      font-size: 0.5em;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--ink-en);
+      letter-spacing: 0.5px;
+      margin-top: 10px;
+    }
+
+    .lead {
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 0.95em;
+      margin: 24px 0 8px;
+    }
+    .lead .en {
+      display: block;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+      margin-top: 6px;
+    }
+
+    .intro {
+      margin: 40px 0;
+      padding: 28px 30px;
+      background: #fffdf8;
+      border: 1px solid var(--hair);
+      border-radius: 4px;
+    }
+    .intro p { margin: 0 0 14px; color: var(--ink-read); }
+    .intro p:last-child { margin-bottom: 0; }
+    .intro .en {
+      display: block;
+      margin-top: 5px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+    }
+
+    .pattern {
+      margin: 56px 0;
+      padding-top: 44px;
+      border-top: 1px solid var(--hair);
+    }
+    .pattern:first-of-type { border-top: none; }
+
+    .pattern .tag {
+      display: inline-block;
+      font-size: 0.78em;
+      color: var(--red);
+      background: var(--tag-bg);
+      padding: 4px 14px;
+      border-radius: 999px;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .pattern h2 {
+      margin: 0 0 6px;
+      font-size: 1.25em;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .pattern h2 .en-title {
+      display: block;
+      font-size: 0.62em;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--ink-en);
+      margin-top: 4px;
+    }
+
+    .formula {
+      margin: 18px 0;
+      padding: 18px 24px;
+      background: #fffdf8;
+      border-left: 3px solid var(--red);
+      font-size: 1.05em;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.5px;
+    }
+
+    .pattern .when {
+      color: var(--ink-read);
+      margin: 16px 0 26px;
+    }
+    .pattern .when .en {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+    }
+    .pattern .note {
+      margin: 20px 0 0;
+      padding: 16px 20px;
+      background: var(--tag-bg);
+      border-radius: 4px;
+      font-size: 0.94em;
+      color: var(--ink-read);
+    }
+    .pattern .note .en {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+    }
+
+    .examples { list-style: none; padding: 0; margin: 0; }
+    .examples li {
+      margin-bottom: 20px;
+      padding: 18px 22px;
+      background: #fffdf8;
+      border-radius: 4px;
+      border: 1px solid var(--hair);
+    }
+    .examples li.wrong { border-left: 3px solid var(--red); }
+    .examples li.right { border-left: 3px solid var(--green); }
+    .examples li:last-child { margin-bottom: 0; }
+    .examples .num {
+      display: inline-block;
+      font-size: 0.75em;
+      color: var(--ink-faint);
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .examples li.wrong .num { color: var(--red); }
+    .examples li.right .num { color: var(--green); }
+    .examples .sentence {
+      color: var(--ink-read);
+      font-weight: 600;
+      line-height: 1.6;
+    }
+    .examples .k { color: var(--red); }
+    .examples .k2 { color: var(--green); }
+    .examples .m { color: #b3762e; } /* manner */
+    .examples .p { color: #3a7a63; } /* place */
+    .examples .f { color: #6a5acd; } /* frequency */
+    .examples .t { color: var(--red); } /* time */
+    .examples .zh {
+      display: block;
+      margin-top: 8px;
+      color: var(--ink-soft);
+      font-size: 0.94em;
+    }
+
+    .safelist {
+      margin: 24px 0;
+      overflow-x: auto;
+    }
+    .safelist table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.92em;
+    }
+    .safelist th, .safelist td {
+      border: 1px solid var(--hair);
+      padding: 12px 14px;
+      text-align: left;
+      color: var(--ink-read);
+      vertical-align: top;
+    }
+    .safelist th { background: #fffdf8; font-weight: 600; color: var(--ink); }
+    .safelist .k2 { color: var(--green); font-weight: 600; }
+
+    /* 圖例 */
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      margin: 16px 0 26px;
+      font-size: 0.85em;
+      color: var(--ink-soft);
+    }
+    .legend span.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
+
+    footer {
+      text-align: center;
+      margin-top: 88px;
+      padding-top: 40px;
+      border-top: 1px solid var(--hair);
+      font-size: 0.85em;
+      color: var(--ink-faint);
+    }
+    footer .en { display: block; font-style: italic; color: var(--ink-en); margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+  <a class="back" href="index.html">← 回邊做邊學首頁 · Back to home</a>
+
+  <header>
+    <h1>副詞的排列順序：一大串副詞該怎麼排
+      <span class="en">Adverb Order: Sequencing Multiple Adverbials</span>
+    </h1>
+  </header>
+
+  <p class="lead">
+    一句話裡同時有時間、地點、方式這幾種副詞時，順序該怎麼排？這其實是兩條不同的規則——一條管「單字型」的頻率副詞放在句子哪個位置，一條管「片語型」的副詞在句尾要怎麼排隊。
+    <span class="en">When a sentence has time, place, and manner adverbs all at once, what order do they go in? This is actually two separate rules — one for where single-word frequency adverbs sit within a sentence, another for how phrase-type adverbials line up at the end of a clause.</span>
+  </p>
+
+  <div class="intro">
+    <p>先分清楚問的是哪一種副詞：<strong>always、usually、often、never、also、already、just</strong> 這類單字，規則是「放在句子中間的固定位置」；<strong>manner（怎麼做）、place（哪裡）、time（何時）</strong> 這類完整片語，規則是「排在句尾的固定順序」。兩條規則都整理進來。
+      <span class="en">First, tell the two kinds apart: single words like always/usually/often/never/also/already/just follow a mid-sentence position rule; full phrases describing manner, place, and time follow an end-of-clause ordering rule. Both are covered here.</span>
+    </p>
+  </div>
+
+  <!-- 規則一 -->
+  <section class="pattern">
+    <span class="tag">規則一 · MID-POSITION ADVERBS</span>
+    <h2>單字頻率／程度副詞的位置
+      <span class="en-title">Where Single-Word Frequency Adverbs Go</span>
+    </h2>
+    <div class="formula">一般動詞前面／be動詞後面／助動詞跟主要動詞中間</div>
+    <p class="when">always、usually、often、sometimes、never、also、already、just、probably、certainly 這類單字副詞，不是放在句尾，而是放在句子「中間」一個固定位置：一般動詞的前面；如果句子有 be 動詞，放在 be 動詞後面；如果有助動詞（have、will、can⋯），放在助動詞跟主要動詞中間。
+      <span class="en">Words like always, usually, often, never, also, already, just, probably sit in a fixed mid-sentence slot — before a general verb, after "be," or between an auxiliary and the main verb — not at the end of the sentence.</span>
+    </p>
+    <ul class="examples">
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">I go usually to work by bus.</div>
+        <span class="zh">usually 擺錯位置，插在動詞和受詞中間了。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確 — 一般動詞前面</span>
+        <div class="sentence">I <span class="k2">usually</span> go to work by bus.</div>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確 — be 動詞後面</span>
+        <div class="sentence">She is <span class="k2">always</span> late for meetings.</div>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確（較複雜）— 助動詞中間</span>
+        <div class="sentence">I have <span class="k2">already</span> sent the email, and the client will <span class="k2">probably</span> reply by tomorrow.</div>
+        <span class="zh">already 卡在 have 跟 sent 中間；probably 卡在 will 跟 reply 中間，兩個都是「助動詞+副詞+主要動詞」的標準位置。</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 規則二 -->
+  <section class="pattern">
+    <span class="tag">規則二 · STACKING ADVERBIALS AT THE END</span>
+    <h2>句尾多個副詞片語的排列順序
+      <span class="en-title">Manner → Place → Frequency → Time</span>
+    </h2>
+    <div class="formula">方式（怎麼做）→ 地點（哪裡）→ 頻率（多常）→ 時間（何時）</div>
+    <p class="when">這是你問的核心：句尾如果同時出現好幾個描述「怎麼做、在哪裡、多常、何時」的完整片語，標準順序是方式在最前面，接著地點，再來頻率，時間放最後。順序錯了句子不一定算是錯，但聽起來會很不自然、像外國腔。
+      <span class="en">This is the core of your question: when multiple full adverbial phrases pile up at the end of a sentence, the conventional order is manner, then place, then frequency, then time. Getting the order wrong isn't always technically ungrammatical, but it sounds distinctly unnatural.</span>
+    </p>
+    <div class="legend">
+      <span><span class="dot" style="background:#b3762e;"></span>方式 Manner</span>
+      <span><span class="dot" style="background:#3a7a63;"></span>地點 Place</span>
+      <span><span class="dot" style="background:#6a5acd;"></span>頻率 Frequency</span>
+      <span><span class="dot" style="background:#b23a2e;"></span>時間 Time</span>
+    </div>
+    <ul class="examples">
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">The team presented <span class="t">this afternoon</span> <span class="m">confidently</span> <span class="p">in the boardroom</span>.</div>
+        <span class="zh">時間放最前面、方式放中間，順序亂了，讀起來卡卡的。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確</span>
+        <div class="sentence">The team presented <span class="m">confidently</span> <span class="p">in the boardroom</span> <span class="t">this afternoon</span>.</div>
+        <span class="zh">方式（confidently）→ 地點（in the boardroom）→ 時間（this afternoon），標準順序。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確（較複雜，四種都出現）</span>
+        <div class="sentence">She practices <span class="m">diligently</span> <span class="p">in the studio</span> <span class="f">every morning</span> <span class="t">before her shift starts</span>.</div>
+        <span class="zh">方式（diligently）→ 地點（in the studio）→ 頻率（every morning）→ 時間（before her shift starts），四種副詞片語全部出現時的標準隊形。</span>
+      </li>
+    </ul>
+    <div class="note">
+      <strong>不用背死順序，記一個邏輯就好</strong>：越「貼近動詞、跟動作本身有關」的副詞（方式）排越前面，越「跟整個事件的大背景有關」的副詞（時間）排越後面——地點、頻率則介於中間，範圍愈來愈大、愈來愈像背景資訊。
+      <span class="en">Don't memorize the order by rote — the logic is that adverbials closer to describing the action itself (manner) come first, and those describing the broader context of the whole event (time) come last, with place and frequency in between.</span>
+    </div>
+  </section>
+
+  <div class="safelist">
+    <table>
+      <thead><tr><th>副詞類型</th><th>位置</th></tr></thead>
+      <tbody>
+        <tr><td>頻率／程度副詞（單字：always, usually, often, never, also, already, just, probably）</td><td><span class="k2">be 動詞後、一般動詞前、助動詞和主要動詞中間</span></td></tr>
+        <tr><td>句尾多個副詞片語一起出現時</td><td><span class="k2">方式 → 地點 → 頻率 → 時間</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>由嘉瑞製作，AI 是工具，手還是自己的。
+      <span class="en">Made by Chia-jue. AI is the tool; the hands are still my own.</span>
+    </p>
+  </footer>
+
+</body>
+</html>
