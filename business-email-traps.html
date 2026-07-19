@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商業書信最容易踩的三個文法陷阱 · Three Grammar Traps in Business Email Writing</title>
+  <style>
+    :root {
+      --paper: #f7f4ee;
+      --ink: #2b2825;
+      --ink-soft: #55504a;
+      --ink-read: #2a2621;
+      --ink-faint: #9a9084;
+      --ink-en: #2a2621;
+      --red: #b23a2e;
+      --green: #4a7a4a;
+      --hair: rgba(43, 40, 37, 0.08);
+      --tag-bg: #f0e9dc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: "Noto Serif TC", "Songti TC", "PingFang TC", "Microsoft JhengHei", serif;
+      background-color: var(--paper);
+      color: var(--ink-soft);
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 96px;
+      line-height: 1.9;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 36px;
+      color: var(--red);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(178, 58, 46, 0.35);
+      padding-bottom: 1px;
+      font-size: 0.92em;
+    }
+    .back:hover { border-bottom-color: var(--red); }
+
+    header { text-align: center; margin-bottom: 12px; }
+
+    h1 {
+      font-size: 1.55em;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 1px;
+      margin: 0 0 8px;
+      line-height: 1.4;
+    }
+
+    h1 .en {
+      display: block;
+      font-size: 0.5em;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--ink-en);
+      letter-spacing: 0.5px;
+      margin-top: 10px;
+    }
+
+    .lead {
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 0.95em;
+      margin: 24px 0 8px;
+    }
+    .lead .en {
+      display: block;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+      margin-top: 6px;
+    }
+
+    .intro {
+      margin: 40px 0;
+      padding: 28px 30px;
+      background: #fffdf8;
+      border: 1px solid var(--hair);
+      border-radius: 4px;
+    }
+    .intro p { margin: 0 0 14px; color: var(--ink-read); }
+    .intro p:last-child { margin-bottom: 0; }
+    .intro .en {
+      display: block;
+      margin-top: 5px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+    }
+
+    .pattern {
+      margin: 56px 0;
+      padding-top: 44px;
+      border-top: 1px solid var(--hair);
+    }
+    .pattern:first-of-type { border-top: none; }
+
+    .pattern .tag {
+      display: inline-block;
+      font-size: 0.78em;
+      color: var(--red);
+      background: var(--tag-bg);
+      padding: 4px 14px;
+      border-radius: 999px;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .pattern h2 {
+      margin: 0 0 6px;
+      font-size: 1.25em;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .pattern h2 .en-title {
+      display: block;
+      font-size: 0.62em;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--ink-en);
+      margin-top: 4px;
+    }
+
+    .formula {
+      margin: 18px 0;
+      padding: 18px 24px;
+      background: #fffdf8;
+      border-left: 3px solid var(--red);
+      font-size: 1.05em;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.5px;
+    }
+
+    .pattern .when {
+      color: var(--ink-read);
+      margin: 16px 0 26px;
+    }
+    .pattern .when .en {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+    }
+    .pattern .note {
+      margin: 20px 0 0;
+      padding: 16px 20px;
+      background: var(--tag-bg);
+      border-radius: 4px;
+      font-size: 0.94em;
+      color: var(--ink-read);
+    }
+    .pattern .note .en {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.9em;
+      font-style: italic;
+      color: var(--ink-en);
+    }
+
+    .examples { list-style: none; padding: 0; margin: 0; }
+    .examples li {
+      margin-bottom: 20px;
+      padding: 18px 22px;
+      background: #fffdf8;
+      border-radius: 4px;
+      border: 1px solid var(--hair);
+    }
+    .examples li.wrong { border-left: 3px solid var(--red); }
+    .examples li.right { border-left: 3px solid var(--green); }
+    .examples li:last-child { margin-bottom: 0; }
+    .examples .num {
+      display: inline-block;
+      font-size: 0.75em;
+      color: var(--ink-faint);
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+    .examples li.wrong .num { color: var(--red); }
+    .examples li.right .num { color: var(--green); }
+    .examples .sentence {
+      color: var(--ink-read);
+      font-weight: 600;
+      line-height: 1.6;
+    }
+    .examples .k { color: var(--red); }
+    .examples .k2 { color: var(--green); }
+    .examples .zh {
+      display: block;
+      margin-top: 8px;
+      color: var(--ink-soft);
+      font-size: 0.94em;
+    }
+
+    /* 安全清單 */
+    .safelist {
+      margin: 24px 0;
+      overflow-x: auto;
+    }
+    .safelist table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.92em;
+    }
+    .safelist th, .safelist td {
+      border: 1px solid var(--hair);
+      padding: 12px 14px;
+      text-align: left;
+      color: var(--ink-read);
+      vertical-align: top;
+    }
+    .safelist th { background: #fffdf8; font-weight: 600; color: var(--ink); }
+    .safelist .k { color: var(--red); font-weight: 600; }
+    .safelist .k2 { color: var(--green); font-weight: 600; }
+
+    /* 檢查清單 */
+    .checklist {
+      margin: 40px 0;
+      padding: 30px 32px;
+      background: var(--tag-bg);
+      border-radius: 6px;
+    }
+    .checklist h2 {
+      margin: 0 0 18px;
+      font-size: 1.15em;
+      color: var(--ink);
+    }
+    .checklist ol { margin: 0; padding-left: 22px; color: var(--ink-read); }
+    .checklist li { margin-bottom: 12px; font-weight: 600; }
+    .checklist li:last-child { margin-bottom: 0; }
+    .checklist li .en {
+      display: block;
+      font-weight: normal;
+      font-style: italic;
+      font-size: 0.86em;
+      color: var(--ink-en);
+      margin-top: 2px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 88px;
+      padding-top: 40px;
+      border-top: 1px solid var(--hair);
+      font-size: 0.85em;
+      color: var(--ink-faint);
+    }
+    footer .en { display: block; font-style: italic; color: var(--ink-en); margin-top: 4px; }
+  </style>
+</head>
+<body>
+
+  <a class="back" href="index.html">← 回邊做邊學首頁 · Back to home</a>
+
+  <header>
+    <h1>商業書信最容易踩的三個文法陷阱
+      <span class="en">Three Grammar Traps in Business Email Writing</span>
+    </h1>
+  </header>
+
+  <p class="lead">
+    這篇筆記的起點是一句我每天都在用、卻一直寫錯的開頭句：「Enclosed I'm sending you company calendar...」。拆開來看，背後其實是三個會反覆出現的固定陷阱——抓住這三個，以後同類的句子就能自己抓出問題。
+    <span class="en">This note started from a sentence I write every day, incorrectly: "Enclosed I'm sending you company calendar..." Underneath it are three recurring traps — once you know them, you can catch similar sentences yourself.</span>
+  </p>
+
+  <div class="intro">
+    <p>這不是語言學理論，是一份「寄出前檢查清單」——目標是讓每天寫的商業書信少犯這三種最常見、也最容易讓人尷尬的錯。
+      <span class="en">This isn't linguistic theory — it's a pre-send checklist, aimed at catching the three most common (and most embarrassing) mistakes in daily business email.</span>
+    </p>
+  </div>
+
+  <!-- 陷阱一 -->
+  <section class="pattern">
+    <span class="tag">陷阱一 · DANGLING OPENERS</span>
+    <h2>固定開頭片語的「懸垂修飾語」
+      <span class="en-title">Fixed Opener Phrases &amp; Dangling Modifiers</span>
+    </h2>
+    <p class="when">商業書信有一小組固定的開頭片語（Enclosed、Attached、Regarding⋯），很多人是把它們當「模板」背下來直接套用，沒搞懂背後的文法邏輯，結果套錯了結構——這種字放在句首時，文法上應該修飾後面那個「東西」（附件、行事曆），不是修飾「我」。
+      <span class="en">Business emails rely on a small set of fixed openers (Enclosed, Attached, Regarding...) that get memorized as templates without understanding the grammar underneath — so they get slotted into the wrong structure. Placed at the start of a sentence, these words should grammatically modify the thing being attached, not "I."</span>
+    </p>
+    <ul class="examples">
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範（懸垂修飾語）</span>
+        <div class="sentence">Enclosed I'm sending you the calendar.</div>
+        <span class="zh">字面邏輯上，Enclosed 變成在修飾「I」——但「我」不是被附上的東西，是行事曆。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確 — 固定搭配</span>
+        <div class="sentence">Enclosed, please find the calendar.</div>
+        <span class="zh">Enclosed 後面接祈使句 please find，這是固定搭配，加逗號。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確 — 表語倒裝</span>
+        <div class="sentence">Enclosed is the calendar for your review.</div>
+        <span class="zh">Enclosed 當表語形容詞，主詞倒裝（相當於 "The calendar is enclosed"）。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確（較複雜，也是最推薦的現代寫法）</span>
+        <div class="sentence">I'm sending you the calendar, updated as of today, for your reference.</div>
+        <span class="zh">乾脆不用 Enclosed，直接用 sending 當主要動詞——現代商業英文越來越少用 "Enclosed/Attached please find" 這種老派句型。</span>
+      </li>
+    </ul>
+
+    <div class="safelist">
+      <table>
+        <thead><tr><th>想用的開頭</th><th>安全的固定搭配</th></tr></thead>
+        <tbody>
+          <tr><td>Enclosed</td><td><span class="k2">Enclosed, please find...</span> / <span class="k2">Enclosed is...</span></td></tr>
+          <tr><td>Attached</td><td><span class="k2">Attached is...</span> / <span class="k2">Please find the report attached.</span></td></tr>
+          <tr><td>不想用固定片語</td><td><span class="k2">I'm sending you... / I've attached...</span>（最推薦）</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <strong>順便抓一個同一家族的高頻錯誤</strong>：Regarding 本身已經有「關於」的意思，後面<strong>不需要</strong>再加 to。「Regarding to your question」是錯的，要嘛寫 <span class="k2">Regarding your question</span>，要嘛寫 <span class="k2">With regard to your question</span>（regard 才配 to）。
+      <span class="en">A related high-frequency error: "regarding" already means "concerning" and never takes "to" after it. Write "regarding your question" or "with regard to your question" — never "regarding to."</span>
+    </div>
+  </section>
+
+  <!-- 陷阱二 -->
+  <section class="pattern">
+    <span class="tag">陷阱二 · ARTICLES（中文母語者最頭痛）</span>
+    <h2>冠詞 a / an / the / 不加冠詞
+      <span class="en-title">Articles: The Hardest Thing for Chinese Speakers</span>
+    </h2>
+    <div class="formula">判斷法：讀者看到這個名詞，知不知道我講的「確切是哪一個」？</div>
+    <p class="when">中文沒有冠詞系統，這是中文母語者寫英文最持續、最難根除的問題，沒有之一。好消息是商業書信裡的名詞多半是「雙方都知道是哪一個」的東西（那份報告、這次會議、這個行事曆），所以大部分時候答案是 <strong>the</strong>。
+      <span class="en">Chinese has no article system, making this the single most persistent issue for Chinese-speaking writers. The good news: business-email nouns are usually something both sides already know exactly which one — so most of the time, the answer is "the."</span>
+    </p>
+    <ul class="examples">
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">Please review company calendar.</div>
+        <span class="zh">公司只有一份行事曆，雙方都知道是哪一份，漏了冠詞。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確</span>
+        <div class="sentence">Please review <span class="k2">the</span> company calendar.</div>
+        <span class="zh">特定、雙方都知道 → the。</span>
+      </li>
+      <li class="wrong">
+        <span class="num">✗ 錯誤示範</span>
+        <div class="sentence">I have question about the report.</div>
+        <span class="zh">「一個問題」是第一次提到、還不確定是哪個問題，不該用 the，但也不能不加冠詞。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確（較複雜）</span>
+        <div class="sentence">I have <span class="k2">a</span> question about <span class="k2">the</span> report you sent yesterday.</div>
+        <span class="zh">「一個問題」是新資訊、不確定哪一個 → a；「你昨天寄的報告」雙方都知道是哪份 → the。同一句話裡兩種冠詞邏輯並存，很典型。</span>
+      </li>
+    </ul>
+
+    <div class="note">
+      <strong>不需要冠詞的情況</strong>：講「不可數名詞」或「泛指、一般性」的東西時，直接不加冠詞。例如 <span class="k2">"We need more information before proceeding."</span>（information 不可數）、<span class="k2">"Please provide feedback by Friday."</span>（feedback 不可數，泛指）。
+      <span class="en">No article needed for uncountable or general/generic nouns — e.g. "more information," "provide feedback."</span>
+    </div>
+
+    <div class="safelist">
+      <table>
+        <thead><tr><th>商業書信常見詞</th><th>幾乎都用</th></tr></thead>
+        <tbody>
+          <tr><td>report, meeting, deadline, budget, calendar, invoice, attachment</td><td><span class="k2">the</span>（幾乎都是特定、雙方已知的那一份）</td></tr>
+          <tr><td>question, issue, idea, concern（第一次提到、還不確定哪一個）</td><td><span class="k2">a / an</span></td></tr>
+          <tr><td>information, feedback, advice, progress（不可數）</td><td>不加冠詞</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 陷阱三 -->
+  <section class="pattern">
+    <span class="tag">陷阱三 · INTRODUCTORY COMMA</span>
+    <h2>句首引導詞後面要加逗號
+      <span class="en-title">Comma After Introductory Words</span>
+    </h2>
+    <div class="formula">句首的單字／短語引導詞，後面加逗號</div>
+    <p class="when">跟前面 Enclosed 的例子一樣，這條規則本身不難——只是常常跟其他問題（像懸垂修飾語）疊在一起，才顯得複雜。單獨看，規則很單純：句首放一個引導詞或短語，後面就加逗號。
+      <span class="en">This rule alone is simple — it's compounded when it overlaps with other issues (like the dangling modifier above). On its own: an introductory word or phrase at the start of a sentence gets a comma after it.</span>
+    </p>
+    <ul class="examples">
+      <li class="right">
+        <span class="num">✓ 正確</span>
+        <div class="sentence">However<span class="k2">,</span> the deadline has been moved to Friday.</div>
+        <span class="zh">句首引導詞 However，後面加逗號。</span>
+      </li>
+      <li class="right">
+        <span class="num">✓ 正確（較複雜）</span>
+        <div class="sentence">As requested in our last meeting<span class="k2">,</span> I've attached the updated budget.</div>
+        <span class="zh">句首引導片語較長時，同樣規則適用，逗號放在片語結束的地方。</span>
+      </li>
+    </ul>
+
+    <div class="safelist">
+      <table>
+        <thead><tr><th colspan="4">商業書信常見句首引導詞（後面都要加逗號）</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>However,</td><td>Additionally,</td><td>Furthermore,</td><td>Enclosed,</td>
+          </tr>
+          <tr>
+            <td>As mentioned above,</td><td>As requested,</td><td>Per our conversation,</td><td>Going forward,</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="checklist">
+    <h2>📋 寄出前檢查清單
+      <span style="display:block; font-weight:normal; font-style:italic; font-size:0.75em; margin-top:4px; color:var(--ink-en);">Pre-Send Checklist</span>
+    </h2>
+    <ol>
+      <li>句首有沒有 Enclosed / Attached / Regarding 這類字？接的結構對嗎？（還是乾脆改用 "I'm sending you..." 最保險）
+        <span class="en">Does the opener match a safe fixed structure — or would "I'm sending you..." be simpler and safer?</span>
+      </li>
+      <li>每個名詞前面，讀者知不知道我講的確切是哪一個？知道 → the；不知道、第一次提 → a/an；泛指、不可數 → 不加。
+        <span class="en">For every noun: does the reader know exactly which one? Known → the; new/unspecified → a/an; generic/uncountable → no article.</span>
+      </li>
+      <li>句首有沒有引導詞（However、As requested、Enclosed⋯）？後面加逗號了嗎？
+        <span class="en">Is there an introductory word or phrase at the start — and does it have a comma after it?</span>
+      </li>
+    </ol>
+  </div>
+
+  <footer>
+    <p>由嘉瑞製作，AI 是工具，手還是自己的。
+      <span class="en">Made by Chia-jue. AI is the tool; the hands are still my own.</span>
+    </p>
+  </footer>
+
+</body>
+</html>
